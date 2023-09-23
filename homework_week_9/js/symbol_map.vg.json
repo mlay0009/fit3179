@@ -28,16 +28,10 @@
           "longitude": {"field": "longitude", "type": "quantitative"},
           "latitude": {"field": "latitude", "type": "quantitative"},
           "size": {
-            "field": "mag",
+            "field": "Full Time Equivalent Enrolments",
             "type": "quantitative",
             "title": "Magnitude (Richter scale)",
             "scale": {"domain": [4, 8]}
-          },
-          "color": {
-            "field": "depth",
-            "type": "quantitative",
-            "title": "Depth in km",
-            "scale": {"scheme": "reds"}
           }
         }
       }
