@@ -2,26 +2,26 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 800,
     "height": 450,
-    "title": "Primary School Rank in Western Australia",
+    "title": "Primary School Rank in New South Wales",
     "projection": {"type": "equirectangular"},
     "layer": [
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_9/js/output.json",
-          "format": {"type": "topojson", "feature": "wa_localities"}
+          "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_9/js/nsw_localities.json",
+          "format": {"type": "topojson", "feature": "nsw_localities"}
         },
-        "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+        "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "gray"}
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_9/data/wa_primary_schools.csv"
+          "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_9/data/nsw_pri_schools.csv"
         },
         "mark": {"type": "circle", "tooltip": {"content": "data"}},
         "encoding": {
           "longitude": {"field": "Longitude", "type": "quantitative"},
           "latitude": {"field": "Latitude", "type": "quantitative"},
           "size": {
-            "field": "Total Students",
+            "field": "Total Enrolments",
             "type": "quantitative",
             "title": "Total Students (Richter scale)",
             "scale": {"domain": [0,2000]}
