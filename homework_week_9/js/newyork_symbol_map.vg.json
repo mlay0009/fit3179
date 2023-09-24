@@ -10,7 +10,7 @@
           "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_9/js/NY-36-new-york-counties.json",
           "format": {"type": "topojson", "feature": "cb_2015_new_york_county_20m"}
         },
-        "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "grey"}
+        "mark": {"type": "geoshape", "stroke": "black"}
       },
       {
         "data": {
@@ -21,7 +21,7 @@
           "longitude": {"field": "Longitude", "type": "quantitative"},
           "latitude": {"field": "Latitude", "type": "quantitative"},
           "size": {
-            "field": "REPORTING_AREA",
+            "field": "Student Enrollment",
             "type": "quantitative",
             "title": "Total Students (Richter scale)",
             "scale": {"domain": [0,1000]}
