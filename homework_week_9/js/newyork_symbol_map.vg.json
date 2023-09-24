@@ -24,7 +24,7 @@
           "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_9/js/ne_10m.json",
           "format": {"type": "topojson", "feature": "ne_10m_admin_2_counties"}
         },
-        "mark": {"type": "geoshape", "fill": null, "stroke": "gray"}
+        "mark": {"type": "geoshape", "fill": "black", "stroke": "black"}
       },
       {
         "data": {
