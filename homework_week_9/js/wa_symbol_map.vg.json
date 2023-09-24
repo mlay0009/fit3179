@@ -14,7 +14,7 @@
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_9/data/nsw_pri_schools.csv"
+          "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_9/data/sydney.csv"
         },
         "mark": {"type": "circle", "tooltip": {"content": "data"}},
         "encoding": {
