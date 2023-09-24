@@ -10,7 +10,7 @@
           "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_9/js/sydney_localities.json",
           "format": {"type": "topojson", "feature": "nsw_localities"}
         },
-        "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "gray"}
+        "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "black"}
       },
       {
         "data": {
