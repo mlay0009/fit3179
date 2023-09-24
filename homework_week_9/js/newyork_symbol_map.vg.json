@@ -28,8 +28,8 @@
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_9/js/oceans.topojson",
-          "format": {"type": "topojson", "feature": "oceans"}
+          "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_9/js/ne_10m_ocean.json",
+          "format": {"type": "topojson", "feature": "ne_10m_ocean"}
         },
         "mark": {"type": "geoshape", "fill": "skyblue"}
       },
