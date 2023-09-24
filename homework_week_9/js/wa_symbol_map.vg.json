@@ -7,7 +7,7 @@
     "layer": [
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_9/js/wa_localities.json",
+          "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_9/js/output.json",
           "format": {"type": "topojson", "feature": "wa_localities"}
         },
         "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
@@ -24,7 +24,7 @@
             "field": "Total Students",
             "type": "quantitative",
             "title": "Total Students (Richter scale)",
-            "scale": {"domain": [0,5000]}
+            "scale": {"domain": [0,2000]}
           }
         }
       }
