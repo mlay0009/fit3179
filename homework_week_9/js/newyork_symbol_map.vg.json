@@ -7,8 +7,8 @@
     "layer": [
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_9/js/NY-36-new-york-counties.json",
-          "format": {"type": "topojson", "feature": "cb_2015_new_york_county_20m"}
+          "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_9/js/new-york-city-boroughsgeojson.json",
+          "format": {"type": "topojson", "feature": "new-york-city-boroughsgeojson"}
         },
         "mark": {"type": "geoshape", "stroke": "black"}
       },
