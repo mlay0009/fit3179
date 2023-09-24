@@ -86,8 +86,8 @@
             {"field": "ng_consumption", "title": "Natural Gas", "type": "quantitative"},
             {"field": "nr_consumption", "title": "Neuclear & Renewables", "type": "quantitative"},
             {"field": "p_consumption", "title": "Petroleum", "type": "quantitative"}
-          ]
-        }
-      }
-    ]
-  }
+            ]
+        }
+    }
+  ]
+}
