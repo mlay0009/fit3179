@@ -119,11 +119,11 @@
           "value": 0
         },
         "tooltip": [
-            {"field": "School_Name", "type": "nominal"},
-            {"field": "School_Sector", "type": "nominal"},
-            {"field": "Girls_Enrolments", "type": "quantitative", "format": ","},
-            {"field": "Boys_Enrolments", "type": "quantitative", "format": ","},
-            {"field": "Total_Enrolments", "type": "quantitative", "format": ","}
+            {"field": "School_Name", "type": "nominal", "title" : "School Name"},
+            {"field": "School_Sector", "type": "nominal", "title" : "School Sector"},
+            {"field": "Girls_Enrolments", "type": "quantitative", "format": ",", "title" : "Count of Females"},
+            {"field": "Boys_Enrolments", "type": "quantitative", "format": ",", "title" : "Count of Males"},
+            {"field": "Total_Enrolments", "type": "quantitative", "format": ",", "title" : "Number of Enrolments"}
         ]
       }
     },
@@ -136,7 +136,7 @@
       "dx": 5
       },
       "encoding": {
-        "text": {"value": "Some Independent Type Schools Tend To Have Only One Gender"}, 
+        "text": {"value": "Independent schools often have a single-gender focus"}, 
         "x": {"value" : 40},
         "y": {"value" : 50},
         "opacity" : {"value" : 1}

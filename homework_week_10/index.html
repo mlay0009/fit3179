@@ -12,16 +12,23 @@
   
 </head>
 <body>
-  
-<div id="dot_map"></div>
+  <h1>FIT3179 Homework Week 10</h1>
+  <h2>New South Wales Primary School Enrolments</h2>
+  <div id="symbol_map"></div>
+  <h2>New South Wales Enrolments by Gender</h2>
+  <div id="bubble_map"></div>
 
-<script type="text/javascript">
+  <script type="text/javascript">
 
-  var spec2 = "js/nsw_bubble_plot.vg.json";
-  vegaEmbed('#dot_map', spec2).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-</script>
-
+    var spec2 = "js/sydney_symbol_map.vg.json";
+    vegaEmbed('#symbol_map', spec2).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    var spec3 = "js/nsw_bubble_plot.vg.json";
+    vegaEmbed('#bubble_map', spec3).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  </script>
+<br>
 </body>
 </html>

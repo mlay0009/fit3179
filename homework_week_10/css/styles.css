@@ -1,3 +1,6 @@
+body {
+	margin: 20px; /* You can adjust the margin value as needed */
+  }
 #symbol_map {
 	top:100px;
 	bottom: 100px; 
