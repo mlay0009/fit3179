@@ -1,0 +1,116 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Sydney Primary School Attendance Rate (2011-2022)",
+    "width": "container",
+    "height": 500,
+    "params": [
+      {
+        "name": "Year_selection",
+        "value": 2018,
+        "bind": {
+          "input": "range",
+          "min": 2011,
+          "max": 2022,
+          "step": 1,
+          "name": "Year:  "
+        }
+      },
+      {
+        "name": "zoom_level",
+        "value": 30000,
+        "bind": {
+          "input": "range",
+          "min": 3500,
+          "max": 60000,
+          "step": 100,
+          "name": "Zoom: "
+        }
+      },
+      {
+        "name": "center_to",
+        "value": [145, -37.95],
+        "bind": {
+          "input": "select",
+          "options": [
+            [145, -37.95],
+            [144.3, -38.1],
+            [144.9, -36.7],
+            [147.1, -38.1]
+          ],
+          "labels": ["Melbourne CBD", "Geelong", "Bendigo", "Sale"],
+          "name": "Map Centre: "
+        }
+      }
+    ],
+    "projection": {
+      "type": "equirectangular",
+      "center": {"expr": "center_to"},
+      "scale": {"expr": "zoom_level"}
+    },
+    "layer": [
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_9/js/sydney_localities.json",
+          "format": {"type": "topojson", "feature": "nsw_localities"}
+        },
+        "transform": [
+          {
+            "calculate": "'Data is not available in ' + datum.properties.NAME",
+            "as": "note"
+          }
+        ],
+        "mark": {
+          "type": "geoshape",
+          "fill": "#ddd",
+          "stroke": "white",
+          "strokeWidth": 1
+        },
+        "encoding": {"tooltip": {"field": "note"}}
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_9/data/nsw_pri_schools.csv"
+        },
+        "transform": [
+          {
+            "lookup": "Primary School Name",
+            "from": {
+              "data": {
+                "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_9/js/sydney_localities.json",
+                "format": {
+                  "type": "topojson",
+                  "feature": "nsw_localities"
+                }
+              },
+              "key": "properties.NAME"
+            },
+            "as": "geo"
+          },
+          {"filter": "datum.year == Year_selection"}
+        ],
+        "mark": {"type": "geoshape", "stroke": "#fff", "strokeWidth": 0.5},
+        "encoding": {
+          "longitude": {"field": "Longitude", "type": "quantitative"},
+          "latitude": {"field": "Latitude", "type": "quantitative"},
+          "shape": {"field": "geo", "type": "geojson"},
+          "color": {
+            "field": "price",
+            "type": "quantitative",
+            "scale": {"domain": [400000, 1800000], "scheme": "reds"},
+            "legend": {"format": ".2s"}
+          },
+          "tooltip": [
+            {"field": "locality", "type": "nominal", "title": "Suburb"},
+            {
+              "field": "price",
+              "type": "quantitative",
+              "title": "Median Price",
+              "format": ","
+            },
+            {"field": "year", "type": "quantitative", "title": "Year"}
+          ]
+        }
+      }
+    ],
+    "config": {}
+  }
