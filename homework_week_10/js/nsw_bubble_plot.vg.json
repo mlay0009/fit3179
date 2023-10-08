@@ -75,6 +75,7 @@
         },
         "color": {
           "field": "School_Sector",
+          "title" : "School Sector",
           "type": "nominal",
           "scale": {
             "domain": [
