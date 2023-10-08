@@ -4,7 +4,7 @@
   "height": 450,
   "title": "Primary School Rank in New South Wales",
   "data": {
-    "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_10/data/clean_nsw_pri_schools.csv"
+    "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_10/data/clean.csv"
   },
   "projection": {"type": "equirectangular"},
   "params":[
@@ -24,7 +24,7 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_10/data/clean_nsw_pri_schools.csv"
+        "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_10/data/clean.csv"
       },
       "transform": [
         {
