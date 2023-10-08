@@ -16,7 +16,7 @@
         "data": {
           "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_9/data/sydney.csv"
         },
-        "mark": {"type": "circle", "tooltip": {"content": "data"}},
+        "mark": {"type": "circle"},
         "encoding": {
           "longitude": {"field": "Longitude", "type": "quantitative"},
           "latitude": {"field": "Latitude", "type": "quantitative"},
@@ -25,7 +25,14 @@
             "type": "quantitative",
             "title": "Total Students (Richter scale)",
             "scale": {"domain": [0,2000]}
-          }
+          },
+          "tooltip": [
+            {"field": "School Name", "type": "nominal", "title": "School Name"},
+            {"field": "Suburb", "type": "nominal", "title": "Suburb"},
+            {"field": "Type", "type": "nominal", "title": "School Type"},
+            {"field": "School Sector", "type": "nominal", "title": "School Sector"},
+            {"field": "Total Enrolments", "type": "nominal", "title": "Total Enrolments"}
+          ]
         }
       }
     ]
