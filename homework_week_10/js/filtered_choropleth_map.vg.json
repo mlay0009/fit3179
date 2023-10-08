@@ -7,13 +7,6 @@
     "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_10/data/clean.csv"
   },
   "projection": {"type": "equirectangular"},
-  "params":[
-    {
-      "name": "select_year",
-      "value" : 2021,
-      "bind": {"input":"range", "min":2011,"max":2022,"step":1,"name":"Year: "}
-    }
-  ],
   "layer": [
     {
       "data": {
@@ -37,13 +30,6 @@
             "key": "properties.NAME"
           },
           "as" : "geo"
-        },
-        {"filter": "datum.Year == select_year"},
-        {
-          "aggregate": [
-            {"op": "mean", "field": "Acceptance Rate", "as": "MeanValue"} 
-          ],
-          "groupby": ["Suburb"]
         }
       ],
       "mark": {
