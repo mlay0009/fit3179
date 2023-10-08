@@ -37,9 +37,9 @@
       },
       "encoding": {
         "shape": {"field": "geo", "type": "geojson"},
-        "color": {"field": "Suburb", "type": "quantitative", "scale": {"scheme": "blues"}},
+        "color": {"field": "Acceptance Rate", "type": "quantitative", "scale": {"scheme": "blues"}},
         "tooltip": [
-          {"field": "year", "title": "Year"}
+          {"field": "Suburb", "title": "Suburb"}
         ]
       }
     }
