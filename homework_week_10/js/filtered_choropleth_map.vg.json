@@ -29,15 +29,16 @@
             },
             "key": "properties.NAME"
           },
-          "as" : "geo"
+          "as": "geo"
         }
       ],
       "mark": {
-        "type": "geoshape", "stroke" : "white"
+        "type": "geoshape",
+        "stroke": "white"
       },
       "encoding": {
         "shape": {"field": "geo", "type": "geojson"},
-        "color": {"field": "Acceptance Rate", "type": "quantitative", "scale": {"scheme": "blues"}},
+        "color": {"field": "Accept", "type": "quantitative", "scale": {"scheme": "blues"}},
         "tooltip": [
           {"field": "Suburb", "title": "Suburb"}
         ]
