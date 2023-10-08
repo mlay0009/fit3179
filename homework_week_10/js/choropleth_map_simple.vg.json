@@ -28,7 +28,7 @@
       },
       "transform": [
         {
-          "lookup": "Suburb",
+          "lookup": "Postcode",
           "from": {
             "data": {
               "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_9/js/sydney_localities.json",
@@ -41,7 +41,7 @@
           "aggregate": [
             {"op": "mean", "field": "Value", "as": "MeanValue"} 
           ],
-          "groupby": ["Suburb"]
+          "groupby": ["Postcode"]
         }
       ],
       "mark": {
@@ -51,7 +51,7 @@
         "shape": {"field": "geo", "type": "geojson"},
         "color": {"field": "Value", "type": "quantitative", "scale": {"scheme": "blues"}},
         "tooltip": [
-          {"field": "Suburb", "title": "Suburb"},
+          {"field": "Postcode", "title": "Postcode"},
           {"field": "MeanValue", "title": "MeanValue"}
         ]
       }
