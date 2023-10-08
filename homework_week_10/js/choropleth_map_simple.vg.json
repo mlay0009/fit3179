@@ -4,7 +4,7 @@
   "height": 450,
   "title": "Primary School Rank in New South Wales",
   "data": {
-    "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_9/data/nsw_pri_schools.csv"
+    "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_10/data/nsw_pri_schools.csv"
   },
   "projection": {"type": "equirectangular"},
   "params":[
@@ -17,24 +17,24 @@
   "layer": [
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_9/js/sydney_localities.json",
+        "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_10/js/sydney_localities.json",
         "format": {"type": "topojson", "feature": "nsw_localities"}
       },
       "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "black"}
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_9/data/nsw_pri_schools.csv"
+        "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_10/data/nsw_pri_schools.csv"
       },
       "transform": [
         {
           "lookup": "Postcode",
           "from": {
             "data": {
-              "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_9/js/sydney_localities.json",
+              "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_10/js/sydney_localities.json",
               "format": {"type": "topojson", "feature": "nsw_localities"}
             },
-            "key": "nsw_localities"
+            "key": "Postcode"
           }
         },
         {

@@ -4,7 +4,7 @@
   "height": 450,
   "title": "Primary School Rank in New South Wales",
   "data": {
-    "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_9/data/nsw_pri_schools.csv"
+    "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_10/data/nsw_pri_schools.csv"
   },
   "projection": {"type": "equirectangular"},
   "params":[
@@ -17,42 +17,43 @@
   "layer": [
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_9/js/sydney_localities.json",
+        "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_10/js/sydney_localities.json",
         "format": {"type": "topojson", "feature": "nsw_localities"}
       },
       "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "black"}
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_9/data/nsw_pri_schools.csv"
+        "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_10/data/nsw_pri_schools.csv"
       },
       "transform": [
         {
           "lookup": "Suburb",
           "from": {
             "data": {
-              "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_9/js/sydney_localities.json",
+              "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_10/js/sydney_localities.json",
               "format": {"type": "topojson", "feature": "nsw_localities"}
             },
-            "key": "nsw_localities"
-          }
+            "key": "Suburb"
+          },
+          "as" : "geo"
         },
+        {"filter": "datum.Year == select_year"},
         {
           "aggregate": [
-            {"op": "mean", "field": "Value", "as": "MeanValue"} 
+            {"op": "mean", "field": "Acceptance Rate", "as": "MeanValue"} 
           ],
           "groupby": ["Suburb"]
         }
       ],
       "mark": {
-        "type": "geoshape", "tooltip": {"content": "data"}
+        "type": "geoshape", "stroke" : "white"
       },
       "encoding": {
         "shape": {"field": "geo", "type": "geojson"},
-        "color": {"field": "Value", "type": "quantitative", "scale": {"scheme": "blues"}},
+        "color": {"field": "Acceptance Rate", "type": "quantitative", "scale": {"scheme": "blues"}},
         "tooltip": [
-          {"field": "Suburb", "title": "Suburb"},
-          {"field": "MeanValue", "title": "MeanValue"}
+          {"field": "Suburb", "title": "Suburb"}
         ]
       }
     }
