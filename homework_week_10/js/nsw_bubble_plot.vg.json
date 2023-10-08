@@ -39,6 +39,7 @@
     }
   ],
   "transform": [
+    {"filter": "datum.Total_Enrolments > no_enrolments"},
     {
       "filter": "school_sector == null || datum.School_Sector == school_sector"
     }
