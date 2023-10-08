@@ -1,0 +1,125 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 600,
+  "title": "COVID-19 Cases per Country (13 Oct 2020)",
+  "data": {
+    "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_10/data/ori_nsw.csv"
+  },
+  "params": [
+    {
+      "name": "no_enrolments",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 10000,
+        "step": 10,
+        "name": "Minimum Enrolments: "
+      }
+    },
+    {
+      "name": "school_sector",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Catholic",
+          "Government",
+          "Independent"
+        ],
+        "labels": [
+          "Show All",
+          "Catholic",
+          "Government",
+          "Independent"
+        ],
+        "name": "School Sector Type: "
+      }
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "Girls_Enrolments",
+      "type": "quantitative",
+      "title": "Girl Enrolments",
+      "axis": {"tickCount": 7},
+      "scale": {"type": "log", "domain": [1, 10000]}
+    },
+    "y": {
+      "field": "Boys_Enrolments",
+      "type": "quantitative",
+      "axis": {"tickCount": 6},
+      "scale": {"type": "log", "domain": [1, 10000]}
+    }
+  },
+  "layer": [
+    {
+      "mark": "circle",
+      "encoding": {
+        "size": {
+          "field": "Total_Enrolments",
+          "type": "quantitative",
+          "scale": {
+            "type": "threshold",
+            "domain": [10, 100, 1000, 10000],
+            "range": [10, 50, 150, 200]
+          },
+          "legend": {"format": ".1s"}
+        },
+        "color": {
+          "field": "Continent",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+                "Catholic",
+                "Government",
+                "Independent"
+            ],
+            "range": [
+              "#e41a1c",
+              "#984ea3",
+              "#ff7f00"
+            ]
+          }
+        },
+        "opacity": {"value": 0.6},
+        "tooltip": [
+          {"field": "School_Name", "type": "nominal"},
+          {"field": "School_Sector", "type": "nominal"},
+          {"field": "Girls_Enrolments", "type": "quantitative", "format": ","},
+          {"field": "Boys_Enrolments", "type": "quantitative", "format": ","},
+          {"field": "Total_Enrolments", "type": "quantitative", "format": ","}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -12,
+        "fontSize": 11.5,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": {"field": "School_Name", "type": "nominal"},
+        "color": {"value": "black"},
+        "opacity": {
+          "condition": {
+            "test": "datum['School_Name'] == 'Afterlee Public School' || datum['Country'] == 'All Hallows Catholic Primary School'",
+            "value": 1
+          },
+          "value": 0
+        },
+        "tooltip": [
+            {"field": "School_Name", "type": "nominal"},
+            {"field": "School_Sector", "type": "nominal"},
+            {"field": "Girls_Enrolments", "type": "quantitative", "format": ","},
+            {"field": "Boys_Enrolments", "type": "quantitative", "format": ","},
+            {"field": "Total_Enrolments", "type": "quantitative", "format": ","}
+        ]
+      }
+    }
+  ]
+}
