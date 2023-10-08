@@ -113,8 +113,8 @@
         "color": {"value": "black"},
         "opacity": {
           "condition": {
-            "test": "datum['School_Name'] == 'Afterlee Public School' || datum['School_Name'] == 'All Hallows Catholic Primary School'",
-            "value": 1
+            "test": "datum['School_Name'] == 'The Illawarra Grammar School'",
+            "value": 0
           },
           "value": 0
         },
@@ -125,6 +125,21 @@
             {"field": "Boys_Enrolments", "type": "quantitative", "format": ","},
             {"field": "Total_Enrolments", "type": "quantitative", "format": ","}
         ]
+      }
+    },
+    {
+      "mark": {
+      "type" : "text",
+      "align" : "left",
+      "baseline": "middle",
+      "fontSize": 12, 
+      "dx": 5
+      },
+      "encoding": {
+        "text": {"value": "Some Independent Type Schools Tend To Have Only One Gender"}, 
+        "x": {"value" : 40},
+        "y": {"value" : 50},
+        "opacity" : {"value" : 1}
       }
     }
   ]
