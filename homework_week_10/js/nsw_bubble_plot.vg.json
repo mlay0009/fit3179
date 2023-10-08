@@ -48,12 +48,14 @@
     "x": {
       "field": "Girls_Enrolments",
       "type": "quantitative",
-      "title": "Girl Enrolments"
+      "title": "Girl Enrolments",
+      "scale": {"type": "log", "domain": [1, 3000]}
     },
     "y": {
       "field": "Boys_Enrolments",
       "type": "quantitative",
-      "title" : "Boys Enrolments"
+      "title" : "Boys Enrolments",
+      "scale": {"type": "log", "domain": [1, 3000]}
     }
   },
   "layer": [
@@ -67,12 +69,12 @@
           "scale": {
             "type": "threshold",
             "domain": [10, 100, 500, 1000, 4000],
-            "range": [10, 50, 150, 200]
+            "range": [1, 5, 10, 20, 50]
           },
           "legend": {"format": ".1s"}
         },
         "color": {
-          "field": "Continent",
+          "field": "School_Sector",
           "type": "nominal",
           "scale": {
             "domain": [
