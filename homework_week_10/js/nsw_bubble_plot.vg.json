@@ -2,9 +2,9 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 800,
   "height": 600,
-  "title": "COVID-19 Cases per Country (13 Oct 2020)",
+  "title": "NSW Primary School Enrolments",
   "data": {
-    "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_10/data/ori_nsw.csv"
+    "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_10/data/nsw_bubble.csv"
   },
   "params": [
     {
@@ -13,7 +13,7 @@
       "bind": {
         "input": "range",
         "min": 0,
-        "max": 10000,
+        "max": 3100,
         "step": 10,
         "name": "Minimum Enrolments: "
       }
@@ -38,19 +38,21 @@
       }
     }
   ],
+  "transform": [
+    {
+      "filter": "school_sector == null || datum.School_Sector == school_sector"
+    }
+  ],
   "encoding": {
     "x": {
       "field": "Girls_Enrolments",
       "type": "quantitative",
-      "title": "Girl Enrolments",
-      "axis": {"tickCount": 7},
-      "scale": {"type": "log", "domain": [1, 10000]}
+      "title": "Girl Enrolments"
     },
     "y": {
       "field": "Boys_Enrolments",
       "type": "quantitative",
-      "axis": {"tickCount": 6},
-      "scale": {"type": "log", "domain": [1, 10000]}
+      "title" : "Boys Enrolments"
     }
   },
   "layer": [
@@ -59,10 +61,11 @@
       "encoding": {
         "size": {
           "field": "Total_Enrolments",
+          "title" : "Total Enrolments",
           "type": "quantitative",
           "scale": {
             "type": "threshold",
-            "domain": [10, 100, 1000, 10000],
+            "domain": [10, 100, 500, 1000, 4000],
             "range": [10, 50, 150, 200]
           },
           "legend": {"format": ".1s"}
@@ -107,7 +110,7 @@
         "color": {"value": "black"},
         "opacity": {
           "condition": {
-            "test": "datum['School_Name'] == 'Afterlee Public School' || datum['Country'] == 'All Hallows Catholic Primary School'",
+            "test": "datum['School_Name'] == 'Afterlee Public School' || datum['School_Name'] == 'All Hallows Catholic Primary School'",
             "value": 1
           },
           "value": 0
