@@ -7,24 +7,11 @@
       },
     "layer": [
       {
-        "mark": "line",
+        "mark": "point",
         "encoding": {
-          "x": {"field": "year", "type": "ordinal", "title": "Year"},
-          "y": {"field": "value", "type": "quantitative", "title": "Value"}
+          "x": {"field": "Year", "type": "ordinal", "title": "Year"},
+          "y": {"field": "Acceptance Rate", "type": "quantitative", "title": "Acceptance Rate"}
         }
-      },
-      {
-        "mark": {"type": "rect", "opacity": 0.2},
-        "encoding": {
-          "x": {"field": "year", "type": "ordinal"},
-          "x2": {"value": 2021},
-          "color": {"value": "lightgray"}
-        },
-        "transform": [
-          {
-            "filter": {"field": "year", "gte": 2019, "lte": 2021}
-          }
-        ]
       }
     ]
   }
