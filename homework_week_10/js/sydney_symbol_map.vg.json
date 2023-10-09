@@ -55,7 +55,7 @@
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_10/data/sydney_symbol.csv"
+          "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_10/data/sydney.csv"
         },
         "mark": {"type": "circle"},
         "encoding": {
