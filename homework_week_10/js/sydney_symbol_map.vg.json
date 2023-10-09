@@ -4,6 +4,21 @@
     "height": 450,
     "title": "Primary School Rank in New South Wales",
     "projection": {"type": "equirectangular"},
+    "params": [
+    {
+      "name": "no_enrolments",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 3100,
+        "step": 10,
+        "name": "Minimum Enrolments: "
+      }
+    }],
+    "transform": [
+      {"filter": "datum.Total_Enrolments > no_enrolments"}
+    ],
     "layer": [
       {
         "data": {
@@ -21,17 +36,17 @@
           "longitude": {"field": "Longitude", "type": "quantitative"},
           "latitude": {"field": "Latitude", "type": "quantitative"},
           "size": {
-            "field": "Total Enrolments",
+            "field": "Total_Enrolments",
             "type": "quantitative",
             "title": "Total Students (Richter scale)",
             "scale": {"domain": [0,2000]}
           },
           "tooltip": [
-            {"field": "School Name", "type": "nominal", "title": "School Name"},
+            {"field": "School_Name", "type": "nominal", "title": "School Name"},
             {"field": "Suburb", "type": "nominal", "title": "Suburb"},
             {"field": "Type", "type": "nominal", "title": "School Type"},
-            {"field": "School Sector", "type": "nominal", "title": "School Sector"},
-            {"field": "Total Enrolments", "type": "nominal", "title": "Total Enrolments"}
+            {"field": "School_Sector", "type": "nominal", "title": "School Sector"},
+            {"field": "Total_Enrolments", "type": "nominal", "title": "Total Enrolments"}
           ]
         }
       }
