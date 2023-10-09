@@ -1,0 +1,31 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "height": 400,
+    "data": {
+        "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_10/data/clean_nsw_pri_schools.csv"
+      },
+    "layer": [
+      {
+        "mark": "line",
+        "encoding": {
+          "x": {"field": "year", "type": "ordinal", "title": "Year"},
+          "y": {"field": "value", "type": "quantitative", "title": "Value"}
+        }
+      },
+      {
+        "mark": {"type": "rect", "opacity": 0.2},
+        "encoding": {
+          "x": {"field": "year", "type": "ordinal"},
+          "x2": {"value": 2021},
+          "color": {"value": "lightgray"}
+        },
+        "transform": [
+          {
+            "filter": {"field": "year", "gte": 2019, "lte": 2021}
+          }
+        ]
+      }
+    ]
+  }
+  

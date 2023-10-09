@@ -3,48 +3,10 @@
     "width": 450,
     "height": 450,
     "title": "Primary School Rank in New South Wales",
-    "projection": {"type": "equirectangular"},
     "data": {
       "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_10/data/sydney_map.csv"
     },
-    "params": [
-    {
-      "name": "no_enrolments",
-      "value": 0,
-      "bind": {
-        "input": "range",
-        "min": 0,
-        "max": 2000,
-        "step": 1,
-        "name": "Minimum Enrolments: "
-      }
-    },
-    {
-      "name": "school_sector",
-      "bind": {
-        "input": "select",
-        "options": [
-          "All",
-          "Catholic",
-          "Government",
-          "Independent"
-        ],
-        "labels": [
-          "Show All",
-          "Catholic",
-          "Government",
-          "Independent"
-        ],
-        "name": "School Sector Type: "
-      }
-    }
-  ],
-    "transform": [
-      {"filter": "datum.Total_Enrolments > no_enrolments"},
-    {
-      "filter": "school_sector == 'All' || datum.School_Sector == school_sector"
-    }
-    ],
+    "projection": {"type": "equirectangular"},
     "layer": [
       {
         "data": {
@@ -74,9 +36,11 @@
           "tooltip": [
             {"field": "School_Name", "type": "nominal", "title": "School Name"},
             {"field": "Suburb", "type": "nominal", "title": "Suburb"},
-            {"field": "Type", "type": "nominal", "title": "School Type"},
+            {"field": "Poscode", "type": "nominal", "title": "Postcode"},
             {"field": "School_Sector", "type": "nominal", "title": "School Sector"},
-            {"field": "Total_Enrolments", "type": "nominal", "title": "Total Enrolments"}
+            {"field": "Total_Enrolments", "type": "nominal", "title": "Total Enrolments"},
+            {"field": "Indigenous_Enrolments", "type": "nominal", "title": "Indigenous Enrolments"},
+            {"field": "Language_Background_Other_Than_English", "type" : "nominal", "title" : "Languages(excluding English)"}
           ]
         }
       }
