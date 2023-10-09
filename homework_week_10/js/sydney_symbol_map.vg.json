@@ -1,9 +1,12 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 800,
+    "width": 450,
     "height": 450,
     "title": "Primary School Rank in New South Wales",
     "projection": {"type": "equirectangular"},
+    "data": {
+      "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_10/data/sydney.csv"
+    },
     "params": [
     {
       "name": "no_enrolments",
@@ -11,13 +14,36 @@
       "bind": {
         "input": "range",
         "min": 0,
-        "max": 3100,
-        "step": 10,
+        "max": 2000,
+        "step": 1,
         "name": "Minimum Enrolments: "
       }
-    }],
+    },
+    {
+      "name": "school_sector",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Catholic",
+          "Government",
+          "Independent"
+        ],
+        "labels": [
+          "Show All",
+          "Catholic",
+          "Government",
+          "Independent"
+        ],
+        "name": "School Sector Type: "
+      }
+    }
+  ],
     "transform": [
-      {"filter": "datum.Total_Enrolments > no_enrolments"}
+      {"filter": "datum.Total_Enrolments > no_enrolments"},
+    {
+      "filter": "school_sector == null || datum.School_Sector == school_sector"
+    }
     ],
     "layer": [
       {
@@ -29,7 +55,7 @@
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_10/data/sydney.csv"
+          "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_10/data/sydney_symbol.csv"
         },
         "mark": {"type": "circle"},
         "encoding": {
@@ -39,7 +65,11 @@
             "field": "Total_Enrolments",
             "type": "quantitative",
             "title": "Total Students (Richter scale)",
-            "scale": {"domain": [0,2000]}
+            "scale": {
+              "type": "threshold",
+              "domain": [50, 100, 500, 1000, 4000],
+              "range": [10, 25, 50, 100, 200]
+            }
           },
           "tooltip": [
             {"field": "School_Name", "type": "nominal", "title": "School Name"},
