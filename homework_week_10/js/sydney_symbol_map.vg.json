@@ -5,7 +5,7 @@
     "title": "Primary School Rank in New South Wales",
     "projection": {"type": "equirectangular"},
     "data": {
-      "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_10/data/sydney.csv"
+      "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_10/data/sydney_map.csv"
     },
     "params": [
     {
@@ -24,7 +24,7 @@
       "bind": {
         "input": "select",
         "options": [
-          null,
+          "All",
           "Catholic",
           "Government",
           "Independent"
@@ -42,7 +42,7 @@
     "transform": [
       {"filter": "datum.Total_Enrolments > no_enrolments"},
     {
-      "filter": "school_sector == null || datum.School_Sector == school_sector"
+      "filter": "school_sector == 'All' || datum.School_Sector == school_sector"
     }
     ],
     "layer": [
@@ -55,7 +55,7 @@
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_10/data/sydney.csv"
+          "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_10/data/sydney_map.csv"
         },
         "mark": {"type": "circle"},
         "encoding": {
