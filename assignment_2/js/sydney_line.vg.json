@@ -33,7 +33,7 @@
           "x2": {"value" : 600},
           "y": {"value": 0},
           "y2": {"value" : 400},
-          "opacity": {"value": 0.09}
+          "opacity": {"value": 0.08}
         }
       },
       {
@@ -58,12 +58,12 @@
           "fontStyle" : "italic",
           "baseline": "middle",
           "color" : "lightcoral",
-          "fontSize": 10,
+          "fontSize": 11,
           "dx": 5
         },
         "encoding": {
           "text": {"value": "COVID-19 Pandemic Era"},
-          "x": {"value": 470},
+          "x": {"value": 460},
           "y": {"value": 380},
           "opacity": {"value": 1}
         }
