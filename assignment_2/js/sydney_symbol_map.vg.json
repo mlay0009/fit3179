@@ -1,0 +1,71 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 450,
+  "height": 450,
+  "title": "Primary School Rank in New South Wales",
+  "data": {
+    "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_10/data/sydney_map.csv"
+  },
+  "params": [
+    {
+      "name": "school_sector",
+      "bind": {
+        "input": "select",
+        "options": [null, "Catholic", "Government", "Independent"],
+        "labels": ["Show All", "Catholic", "Government", "Independent"],
+        "name": "School Sector Type: "
+      }
+    }
+  ],
+  "projection": { "type": "equirectangular" },
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_10/js/syd_localities.json",
+        "format": { "type": "topojson", "feature": "nsw_localities" }
+      },
+      "mark": { "type": "geoshape", "fill": "lightgray", "stroke": "white" }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_10/data/sydney_map.csv"
+      },
+      "mark": { "type": "circle" },
+      "encoding": {
+        "longitude": { "field": "Longitude", "type": "quantitative" },
+        "latitude": { "field": "Latitude", "type": "quantitative" },
+        "size": {
+          "field": "Total_Enrolments",
+          "type": "quantitative",
+          "title": "Total Students (Richter scale)",
+          "scale": {
+            "type": "threshold",
+            "domain": [50, 100, 500, 1000, 4000],
+            "range": [10, 25, 50, 100, 200]
+          }
+        },
+        "color": {
+          "field": "School_Sector",
+          "title": "School Sector",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Catholic", "Government", "Independent"],
+            "range": ["#e41a1c", "#984ea3", "#ff7f00"]
+          }
+        },
+        "tooltip": [
+          { "field": "School_Name", "type": "nominal", "title": "School Name" },
+          { "field": "Suburb", "type": "nominal", "title": "Suburb" },
+          { "field": "Poscode", "type": "nominal", "title": "Postcode" },
+          { "field": "School_Sector", "type": "nominal", "title": "School Sector" },
+          { "field": "Total_Enrolments", "type": "nominal", "title": "Total Enrolments" },
+          { "field": "Indigenous_Enrolments", "type": "nominal", "title": "Indigenous Enrolments" },
+          { "field": "Language_Background_Other_Than_English", "type": "nominal", "title": "Languages(excluding English)" }
+        ]
+      },
+      "transform": [
+        { "filter": "school_sector == null || datum.School_Sector == school_sector" }
+      ]
+    }
+  ]
+}

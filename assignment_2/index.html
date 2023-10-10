@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+  
+  
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+  
+</head>
+<body>
+  <h1>FIT3179 Homework Week 10</h1>
+  <h2>New South Wales Primary School Enrolments</h2>
+  <div id="symbol_map"></div>
+  <h2>New South Wales Enrolments by Gender</h2>
+  <div id="bubble_map"></div>
+  <h2>Acceptance Rate</h2>
+  <div id="line"></div>
+
+  <script type="text/javascript">
+
+    var spec2 = "js/sydney_symbol_map.vg.json";
+    vegaEmbed('#symbol_map', spec2).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    var spec3 = "js/nsw_bubble_plot.vg.json";
+    vegaEmbed('#bubble_map', spec3).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    var spec4 = "js/sydney_line.vg.json";
+    vegaEmbed('#line', spec4).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  </script>
+<br>
+</body>
+</html>
