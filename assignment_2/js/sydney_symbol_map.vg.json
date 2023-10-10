@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 450,
   "height": 450,
-  "title": "Primary School Rank in New South Wales",
+  "title": "Primary School Enrolments in Sydney",
   "data": {
     "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/homework_week_10/data/sydney_map.csv"
   },
