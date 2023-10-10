@@ -27,11 +27,13 @@
         }
       },
       {
-        "mark": "rect",
+        "mark": {"type": "rect", "color": "lightgray"},
         "encoding": {
-          "x": {"value": 2019}, 
-          "x2": {"value": 2021}, 
-          "color": {"value": "lightgray"}
+          "x": {"value" : 425},
+          "x2": {"value" : 600},
+          "y": {"value": 0},
+          "y2": {"value" : 400},
+          "opacity": {"value": 0.09}
         }
       },
       {
@@ -47,6 +49,39 @@
           "x": {"value": 360},
           "y": {"value": 140},
           "opacity": {"value": 1}
+        }
+      },
+      {
+        "mark": {
+          "type": "text",
+          "align": "left",
+          "fontStyle" : "italic",
+          "baseline": "middle",
+          "color" : "lightcoral",
+          "fontSize": 10,
+          "dx": 5
+        },
+        "encoding": {
+          "text": {"value": "COVID-19 Pandemic Era"},
+          "x": {"value": 480},
+          "y": {"value": 380},
+          "opacity": {"value": 1}
+        }
+      },
+      {
+        "mark": "point",
+        "encoding": {
+          "x": {"field": "year", "type": "ordinal"},
+          "y": {"field": "value", "type": "quantitative"}
+        }
+      },
+      {
+        "mark": {"type": "rule", "color": "gray"},
+        "encoding": {
+          "x": {"field": "year", "type": "ordinal"},
+          "y": {"value": 0},
+          "y2": {"value" : 400},
+          "opacity": {"value": 0.2}
         }
       }
     ]
