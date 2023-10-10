@@ -63,8 +63,8 @@
       "mark": "circle",
       "encoding": {
         "size": {
-          "field": "Total_Enrolments",
-          "title" : "Total Enrolments",
+          "field": "Diversity",
+          "title" : "Diversity",
           "type": "quantitative",
           "scale": {
             "type": "threshold",
