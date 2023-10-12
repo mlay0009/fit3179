@@ -53,13 +53,21 @@
       "field": "Girls_Enrolments",
       "type": "quantitative",
       "title": "Count of Girl Enrolments",
-      "scale": {"type": "log", "domain": [1, 3000]}
+      "scale": {
+        "type": "log", 
+        "domain": [1, 4000],
+        "nice": true
+      }
     },
     "y": {
       "field": "Boys_Enrolments",
       "type": "quantitative",
       "title" : "Count of Boys Enrolments",
-      "scale": {"type": "log", "domain": [1, 3000]}
+      "scale": {
+        "type": "log", 
+        "domain": [1, 4000],
+        "nice": true
+      }
     }
   },
   "layer": [
@@ -133,6 +141,7 @@
       }
     },
     {
+      "data" : {"values" : [{"x_annotation": 10, "y_annotation": 750}]},
       "mark": {
       "type" : "text",
       "align" : "left",
@@ -142,8 +151,8 @@
       },
       "encoding": {
         "text": {"value": "Independent schools often have a single-gender focus"}, 
-        "x": {"value" : 500},
-        "y": {"value" : 30},
+        "x": {"field" : "x_annotation"},
+        "y": {"field" : "y_annotation"},
         "opacity" : {"value" : 1}
       }
     }
