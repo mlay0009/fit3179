@@ -3,7 +3,7 @@
     "title": "2022 Australia Student Enrolments by Region",
     "width": 800,
     "height": 400,
-    "projection": {"type": "equalEarth"},
+    "projection": {"type": "equirectangular"},
     "data": {
       "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/assignment_2/js/australia.topojson",
       "format": {"type": "topojson", "feature": "ne_10m_admin_1_states_provinces"}
