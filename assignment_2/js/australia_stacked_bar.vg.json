@@ -1,0 +1,26 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/assignment_2/data/aus_enrolments.csv"
+  },
+  "title": "Normalized Stacked Bar Chart of Government vs. Non-Government Data",
+  "transform": [
+    {"calculate": "datum.Attribute == 2 ? 'Non-Government' : 'Government'", "as": "type"}
+  ],
+  "mark": "bar",
+  "encoding": {
+    "y": {
+      "field": "State",
+      "type": "nominal"
+    },
+    "x": {
+      "field": "Value",
+      "type": "quantitative",
+      "stack": "normalize"
+    },
+    "color": {
+      "field": "type",
+      "type": "nominal"
+    }
+  }
+}

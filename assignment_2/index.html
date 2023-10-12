@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
-  
   
   <!-- CSS file -->
   <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
@@ -14,12 +14,8 @@
 <body>
   <h1>Sydney Primary Schools</h1>
   <div class="grid-1">
+    <h2>Education in Sydney</h2>
     <div class="column-1-text">
-      <br><br><br>
-      <div id="symbol_map",  class="symbol_map"></div>
-    </div>
-    <div class="column-2-text">
-        <h2>Education in Sydney</h2>
       <p>In Australia, primary education is offered through a range of educational sectors, each with its unique characteristics and 
         contributions to the country's educational landscape. One of the fundamental sectors is the government school system. 
         Government schools are publicly funded and operated by state and territory governments. They serve as an essential pillar of the Australian 
@@ -38,6 +34,10 @@
         in Catholic schools benefit from a holistic education that integrates faith into their learning experience. Catholic schools, like government and 
         independent schools, contribute significantly to the diversity and richness of primary education in Australia. Families have the freedom to choose 
         the sector that aligns with their values, beliefs, and educational aspirations, making the Australian education system inclusive and varied.</p>
+    </div>
+    <div class="column-2-text">
+      <div class="column-1-text"></div>
+        <div id="symbol_map",  class="symbol_map"></div>
     </div>
   </div>
   <br> <hr>
@@ -61,19 +61,28 @@
           During this time, educational institutions across the globe were faced with the challenge of adapting to a new way of teaching and
            learning, which, in many instances, included remote and online education.</p>
     </div>
+    <div id="stacked_bar"></div>
+
 
   <script type="text/javascript">
 
     var spec2 = "js/sydney_symbol_map.vg.json";
-    vegaEmbed('#symbol_map', spec2).then(function(result) {
+    vegaEmbed('#symbol_map', spec2, { "actions": false }).then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
+    
     var spec3 = "js/nsw_bubble_plot.vg.json";
-    vegaEmbed('#bubble_plot', spec3).then(function(result) {
+    vegaEmbed('#bubble_plot', spec3, { "actions": false }).then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
+    
     var spec4 = "js/sydney_line.vg.json";
-    vegaEmbed('#line', spec4).then(function(result) {
+    vegaEmbed('#line', spec4, { "actions": false }).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    
+    var spec5 = "js/australia_stacked_bar.vg.json";
+    vegaEmbed('#stacked_bar', spec5, { "actions": false }).then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
   </script>
