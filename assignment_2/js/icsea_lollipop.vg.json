@@ -9,23 +9,28 @@
     },
     "layer": [
       {
+        "mark": {"type": "rule"},
+        "encoding": {
+          "y": {"field": "Category", "type": "ordinal", "title": "School Sector"},
+          "x": {"field": "Average of ICSEA", "type": "quantitative", "title": "ICSEA", "scale": {"domain": [1100, 1180]}},
+          "x2": {"value": 0}
+        }
+      },
+      {
         "mark": {"type": "circle", "filled": true, "size": 80},
         "encoding": {
           "y": {"field": "Category", "type": "ordinal", "title": "School Sector"},
           "x": {
             "field": "Average of ICSEA", 
             "type": "quantitative", 
-            "scale": {"domain": [1100, 1200]}
+            "scale": {"domain": [1100, 1180]}
             },
-          "color": {"value": "steelblue"}
-        }
-      },
-      {
-        "mark": {"type": "rule"},
-        "encoding": {
-          "y": {"field": "Category", "type": "ordinal", "title": "School Sector"},
-          "x": {"field": "Average of ICSEA", "type": "quantitative", "title": "ICSEA"},
-          "x2": {"value": 0}
+            "color": {
+              "field": "Category",
+              "type": "nominal",
+              "title": "School Sector",
+              "scale": {"range": ["#e41a1c", "#984ea3", "#ff7f00"]}
+            }
         }
       }
     ],

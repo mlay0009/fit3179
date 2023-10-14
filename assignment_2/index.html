@@ -36,7 +36,7 @@
         the sector that aligns with their values, beliefs, and educational aspirations, making the Australian education system inclusive and varied.</p>
     </div>
     <div class="column-2-text">
-      <div class="column-1-text"></div>
+      <div class="column-2-text"></div>
         <div id="symbol_map",  class="symbol_map"></div>
     </div>
   </div>
@@ -65,8 +65,15 @@
   </div>
     <div id="multiple_line"></div>
     <div id="lollipop"></div>
-    <div id="female_heatmap"></div>
-    <div id="male_heatmap"></div>
+    <div class="grid-1">
+      <div class="column-1-text">
+        <div id="female_heatmap"></div>
+      </div>
+      <div class="column-2-text">
+        <div id="male_heatmap"></div>
+      </div>
+    </div>
+    <div id="donut"></div>
 
   <script type="text/javascript">
 
@@ -95,7 +102,7 @@
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
-    var spec7 = "js/icsea_lolipop.vg.json";
+    var spec7 = "js/icsea_lollipop.vg.json";
     vegaEmbed('#lollipop', spec7, { "actions": false }).then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
@@ -107,6 +114,11 @@
 
     var spec9 = "js/male_teacher_heatmap.vg.json";
     vegaEmbed('#male_heatmap', spec9, { "actions": false }).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    var spec10 = "js/sydney_donut.vg.json";
+    vegaEmbed('#donut', spec10, { "actions": false }).then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
   </script>
