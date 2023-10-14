@@ -1,0 +1,26 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "values": [
+        {"Year_Range": "K-6", "Count of Year_Range": 206},
+        {"Year_Range": "P-6", "Count of Year_Range": 36},
+        {"Year_Range": "K-12", "Count of Year_Range": 29}
+      ]
+    },
+    "mark": "arc",
+    "encoding": {
+      "theta": {"field": "Count of Year_Range", "type": "quantitative", "stack": true, "title": "Count of Year Range"},
+      "color": {"field": "Year_Range", "type": "nominal", "legend": {"title": "Year Range"}},
+      "tooltip": [
+        {"field": "Year_Range", "type": "nominal", "title": "Year Range"},
+        {"field": "Count of Year_Range", "type": "quantitative", "title": "Total Schools"}
+      ]
+    },
+    "view": {"stroke": null},
+    "width": 200,
+    "height": 200,
+    "config": {
+      "arc": {"innerRadius": 60}
+    }
+  }
+  

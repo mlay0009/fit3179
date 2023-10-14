@@ -23,7 +23,7 @@
         "mark": "line",
         "encoding": {
           "x": {"field": "year", "type": "ordinal", "title": "Year"},
-          "y": {"field": "value", "type": "quantitative", "title": "Acceptance Rate (%)"}
+          "y": {"field": "value", "type": "quantitative", "title": "Attendace Rate (%)"}
         }
       },
       {
