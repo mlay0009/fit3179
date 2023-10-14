@@ -1,0 +1,24 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/assignment_2/data/sydney_icsea_hist.csv"
+    },
+    "width": 400,
+    "height": 100,
+    "transform":[{
+      "density": "Range",
+      "bandwidth": 0.3
+    }],
+    "mark": "area",
+    "encoding": {
+      "x": {
+        "field": "Range",
+        "title": "ICSEA Value",
+        "type": "quantitative"
+      },
+      "y": {
+        "field": "Count",
+        "type": "quantitative"
+      }
+    }
+  }

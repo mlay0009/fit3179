@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 450,
   "height": 450,
-  "title" : "Primary Schools in Sydney Map",
+  "title": "Primary Schools in Sydney Map",
   "data": {
     "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/assignment_2/data/sydney_map.csv"
   },
@@ -30,6 +30,10 @@
         "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/assignment_2/data/sydney_map.csv"
       },
       "mark": { "type": "circle" },
+      "params" : [{
+                "name": "sector",
+                "select": {"type": "point", "fields": ["School_Sector"]},
+                "bind": "legend"}],
       "encoding": {
         "longitude": { "field": "Longitude", "type": "quantitative" },
         "latitude": { "field": "Latitude", "type": "quantitative" },
@@ -52,6 +56,10 @@
             "range": ["#e41a1c", "#984ea3", "#ff7f00"]
           }
         },
+        "opacity": {
+          "condition": {"param": "sector", "value": 0.8},
+          "value": 0.1
+        },
         "tooltip": [
           { "field": "School_Name", "type": "nominal", "title": "School Name" },
           { "field": "Suburb", "type": "nominal", "title": "Suburb" },
@@ -59,7 +67,7 @@
           { "field": "School_Sector", "type": "nominal", "title": "School Sector" },
           { "field": "Total_Enrolments", "type": "nominal", "title": "Total Enrolments" },
           { "field": "Indigenous_Enrolments", "type": "nominal", "title": "Indigenous Enrolments" },
-          { "field": "Language_Background_Other_Than_English", "type": "nominal", "title": "Languages(excluding English)" }
+          { "field": "Language_Background_Other_Than_English", "type": "nominal", "title": "Student Diversity" }
         ]
       },
       "transform": [
@@ -68,3 +76,4 @@
     }
   ]
 }
+

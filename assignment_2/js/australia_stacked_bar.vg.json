@@ -5,7 +5,8 @@
   },
   "title": "Normalized Stacked Bar Chart of Government vs. Non-Government Data",
   "transform": [
-    {"calculate": "datum.Attribute == 2 ? 'Non-Government' : 'Government'", "as": "type"}
+    {"calculate": "datum.Attribute == 2 ? 'Non-Government' : 'Government'", "as": "type"},
+    {"calculate": "datum.Value * 100", "as": "ValuePercentage"}
   ],
   "mark": "bar",
   "encoding": {
@@ -14,13 +15,23 @@
       "type": "nominal"
     },
     "x": {
-      "field": "Value",
+      "field": "ValuePercentage", 
       "type": "quantitative",
-      "stack": "normalize"
+      "stack": "normalize",
+      "axis": {
+        "format": "%",
+        "title": "Percentage" 
+      }
     },
     "color": {
       "field": "type",
-      "type": "nominal"
-    }
+      "type": "nominal",
+      "title" : "School Type"
+    },
+    "tooltip" :[
+      {"field" : "State", "type" : "nominal"},
+      {"field" : "type", "type" : "nominal"},
+      {"field" : "Value", "type" : "quantitative", "format": ",d", "title" : "Total Enrolments"}
+    ]
   }
 }
