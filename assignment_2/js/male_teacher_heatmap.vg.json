@@ -1,0 +1,38 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/assignment_2/data/sydney_school_teacher.csv"
+    },
+    "mark": "rect",
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "type": "ordinal"
+      },
+      "y": {
+        "field": "Area",
+        "type": "nominal"
+      },
+      "color": {
+        "field": "Male",
+        "type": "quantitative",
+        "scale": {
+          "range": ["white", "#224c98"] 
+        }
+      },
+      "tooltip": [
+        { "field": "Year", "title": "Year" },
+        { "field": "Area", "title": "Area" },
+        { "field": "Male", "title": "Female", "format": ".1f"}
+      ]
+    },
+    "width": 600,
+    "height": 400,
+    "config": {
+      "view": {
+        "stroke": "transparent"
+      }
+    }
+  }
+  
+  

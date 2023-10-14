@@ -62,7 +62,11 @@
         During this time, educational institutions across the globe were faced with the challenge of adapting to a new way of teaching and
           learning, which, in many instances, included remote and online education.</p>
     </div>
-
+  </div>
+    <div id="multiple_line"></div>
+    <div id="lollipop"></div>
+    <div id="female_heatmap"></div>
+    <div id="male_heatmap"></div>
 
   <script type="text/javascript">
 
@@ -83,6 +87,26 @@
     
     var spec5 = "js/australia_stacked_bar.vg.json";
     vegaEmbed('#stacked_bar', spec5, { "actions": false }).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    var spec6 = "js/icsea_lines.vg.json";
+    vegaEmbed('#multiple_line', spec6, { "actions": false }).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    var spec7 = "js/icsea_lolipop.vg.json";
+    vegaEmbed('#lollipop', spec7, { "actions": false }).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    var spec8 = "js/female_teacher_heatmap.vg.json";
+    vegaEmbed('#female_heatmap', spec8, { "actions": false }).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    var spec9 = "js/male_teacher_heatmap.vg.json";
+    vegaEmbed('#male_heatmap', spec9, { "actions": false }).then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
   </script>
