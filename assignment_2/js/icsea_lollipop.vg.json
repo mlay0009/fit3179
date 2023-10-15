@@ -1,32 +1,28 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "data": {
-      "values": [
-        {"Category": "Independent", "Average of ICSEA": 1158.638889},
-        {"Category": "Catholic", "Average of ICSEA": 1129.051724},
-        {"Category": "Government", "Average of ICSEA": 1118.601124}
-      ]
+      "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/assignment_2/data/sydney_dot.csv"
     },
     "layer": [
       {
         "mark": {"type": "rule"},
         "encoding": {
-          "y": {"field": "Category", "type": "ordinal", "title": "School Sector"},
-          "x": {"field": "Average of ICSEA", "type": "quantitative", "title": "ICSEA", "scale": {"domain": [1100, 1180]}},
+          "y": {"field": "School_Sector", "type": "ordinal", "title": "School Sector"},
+          "x": {"field": "Average_ICSEA", "type": "quantitative", "title": "ICSEA", "scale": {"domain": [1100, 1180]}},
           "x2": {"value": 0}
         }
       },
       {
         "mark": {"type": "circle", "filled": true, "size": 80},
         "encoding": {
-          "y": {"field": "Category", "type": "ordinal", "title": "School Sector"},
+          "y": {"field": "School_Sector", "type": "ordinal", "title": "School Sector"},
           "x": {
-            "field": "Average of ICSEA", 
+            "field": "Average_ICSEA", 
             "type": "quantitative", 
             "scale": {"domain": [1100, 1180]}
             },
             "color": {
-              "field": "Category",
+              "field": "School_Sector",
               "type": "nominal",
               "title": "School Sector",
               "scale": {"range": ["#e41a1c", "#984ea3", "#ff7f00"]}

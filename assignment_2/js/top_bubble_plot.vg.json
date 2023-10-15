@@ -3,8 +3,7 @@
   "width": 800,
   "height": 600,
   "title": {
-    "text": "New South Wales Primary School Gender Distribution",
-    "subtitle": "Data Presented in Log-Log Scale",
+    "text": "Top 50 Sydney Primary School Gender Distribution",
     "fontSize": 16,
     "offset": 12
   },
@@ -30,9 +29,9 @@
         ],
         "name": "School Sector Type: "
       }
-    }],
+    }
+  ],
   "transform": [
-    {"filter": "datum.Total_Enrolments > no_enrolments"},
     {
       "filter": "school_sector == null || datum.School_Sector == school_sector"
     }
@@ -41,22 +40,12 @@
     "x": {
       "field": "Girls_Enrolments",
       "type": "quantitative",
-      "title": "Count of Girl Enrolments",
-      "scale": {
-        "type": "log", 
-        "domain": [1, 4000],
-        "nice": true
-      }
+      "title": "Girls Enrollments"
     },
     "y": {
       "field": "Boys_Enrolments",
       "type": "quantitative",
-      "title" : "Count of Boys Enrolments",
-      "scale": {
-        "type": "log", 
-        "domain": [1, 4000],
-        "nice": true
-      }
+      "title": "Boys Enrollments"
     }
   },
   "layer": [
@@ -65,14 +54,14 @@
       "encoding": {
         "size": {
           "field": "Diversity",
-          "title" : "Diversity",
+          "title": "Diversity",
           "type": "quantitative",
           "scale": {
             "type": "threshold",
-            "domain": [10, 100, 500, 1000, 4000],
-            "range": [10, 25, 50, 75, 100]
+            "domain": [0, 30, 50, 75, 100],
+            "range": [20, 50, 75, 100, 200, 250]
           },
-          "legend": {"format": ".1s"}
+          "legend": { "format": ".1s" }
         },
         "color": {
           "field": "School_Sector",
@@ -91,7 +80,6 @@
             ]
           }
         },
-        "opacity": {"value": 0.6},
         "tooltip": [
           {"field": "School_Name", "type": "nominal", "title" : "School Name"},
           {"field": "School_Sector", "type": "nominal", "title" : "School Sector"},
@@ -102,35 +90,7 @@
       }
     },
     {
-      "mark": {
-        "type": "text",
-        "align": "right",
-        "baseline": "middle",
-        "dx": -12,
-        "fontSize": 11.5,
-        "fontStyle": "italic"
-      },
-      "encoding": {
-        "text": {"field": "School_Name", "type": "nominal"},
-        "color": {"value": "black"},
-        "opacity": {
-          "condition": {
-            "test": "datum['School_Name'] == 'The Illawarra Grammar School'",
-            "value": 0
-          },
-          "value": 0
-        },
-        "tooltip": [
-            {"field": "School_Name", "type": "nominal", "title" : "School Name"},
-            {"field": "School_Sector", "type": "nominal", "title" : "School Sector"},
-            {"field": "Girls_Enrolments", "type": "quantitative", "format": ",", "title" : "Count of Females"},
-            {"field": "Boys_Enrolments", "type": "quantitative", "format": ",", "title" : "Count of Males"},
-            {"field": "Total_Enrolments", "type": "quantitative", "format": ",", "title" : "Total Students"}
-        ]
-      }
-    },
-    {
-      "data" : {"values" : [{"x_annotation": 10, "y_annotation": 750}]},
+      "data" : {"values" : [{"x_annotation": 250, "y_annotation": 660}]},
       "mark": {
       "type" : "text",
       "align" : "left",
@@ -139,10 +99,44 @@
       "dx": 5
       },
       "encoding": {
-        "text": {"value": "Independent schools often have a single-gender focus"}, 
+        "text": {"value": "Independent schools tend to have more male students"}, 
         "x": {"field" : "x_annotation"},
         "y": {"field" : "y_annotation"},
         "opacity" : {"value" : 1}
+      }
+    },
+    {
+      "data" : {"values" : [{"x_annotation": 100, "y_annotation": 50}]},
+      "mark": {
+      "type" : "text",
+      "align" : "left",
+      "baseline": "middle",
+      "fontSize": 11, 
+      "dx": 5
+      },
+      "encoding": {
+        "text": {"value": "Catholic schools tend to have more females"}, 
+        "x": {"field" : "x_annotation"},
+        "y": {"field" : "y_annotation"},
+        "opacity" : {"value" : 1}
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"y": "0", "x": "0"},
+          {"y": "800", "x": "800"}
+          ]
+      },
+      "mark": {
+                "type": "line", 
+                "strokeDash": [3], 
+                "strokeWidth": 1,
+                "color": "gray"
+              },
+      "encoding": {
+        "x": {"field": "x", "type": "quantitative"},
+        "y": {"field": "y", "type": "quantitative"}
       }
     }
   ]
