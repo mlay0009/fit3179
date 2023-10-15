@@ -1,0 +1,76 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {"url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/assignment_2/data/sydney_int.csv"},
+    "vconcat": [
+      {
+        "encoding": {
+          "color": {
+            "condition": {
+              "param": "brush",
+              "title": "School Sector",
+              "field": "School_Sector",
+              "type": "nominal",
+              "scale": {
+                "domain": ["Catholic", "Government", "Independent"],
+                "range": ["#e41a1c", "#984ea3", "#ff7f00"]
+              }
+            },
+            "value": "lightgray"
+          },
+          "size": {
+            "title": "Total_Enrolments",
+            "field": "Total_Enrolments",
+            "scale": {"domain": [100, 300, 500, 1000, 2000],
+              "range": [15, 25, 50, 75, 100, 200]},
+            "type": "quantitative"
+          },
+          "x": {
+            "field": "Year",
+            "timeUnit": "year",
+            "title": "Year",
+            "scale": {
+            "domain": [2010, 2023]}
+          },
+          "y": {
+            "title": "Attendance Rate",
+            "field": "Value",
+            "scale": {"domain": [50, 100]},
+            "type": "quantitative"
+          }
+        },
+        "width": 600,
+        "height": 300,
+        "mark": "point",
+        "params": [{
+          "name": "brush",
+          "select": {"type": "interval", "encodings": ["y"]}
+        }],
+        "transform": [{"filter": {"param": "click"}}]
+      },
+      {
+        "encoding": {
+          "color": {
+            "condition": {
+              "param": "click",
+              "field": "School_Sector",
+              "scale": {
+                 "domain": ["Catholic", "Government", "Independent"],
+                "range": ["#e41a1c", "#984ea3", "#ff7f00"]
+              }
+            },
+            "value": "lightgray"
+          },
+          "x": {"aggregate": "count"},
+          "y": {"title": "School Sector", "field": "School_Sector"}
+        },
+        "width": 600,
+        "mark": "bar",
+        "params": [{
+          "name": "click",
+          "select": {"type": "point", "encodings": ["color"]}
+        }],
+        "transform": [{"filter": {"param": "brush"}}]
+      }
+    ]
+  }
+  

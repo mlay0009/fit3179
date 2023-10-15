@@ -179,11 +179,11 @@ Clare Public School,Paddington,Government,1138,291,39,2011,92.1
 Clare Public School,Paddington,Government,1138,291,39,2012,93.8
 Clare Public School,Paddington,Government,1138,291,39,2013,94.4
 Clare Public School,Paddington,Government,1138,291,39,2014,93.4
-Clare Public School,Paddington,Government,1138,291,39,2015,sp
+Clare Public School,Paddington,Government,1138,291,39,2015,92.1
 Clare Public School,Paddington,Government,1138,291,39,2016,86.5
-Clare Public School,Paddington,Government,1138,291,39,2017,sp
-Clare Public School,Paddington,Government,1138,291,39,2018,sp
-Clare Public School,Paddington,Government,1138,291,39,2019,sp
+Clare Public School,Paddington,Government,1138,291,39,2017,92.1
+Clare Public School,Paddington,Government,1138,291,39,2018,92.1
+Clare Public School,Paddington,Government,1138,291,39,2019,92.1
 Clare Public School,Paddington,Government,1138,291,39,2021,92
 Clare Public School,Paddington,Government,1138,291,39,2022,87.3
 Lake Illawarra South Public School,Woollahra,Catholic,1164,258,37,2011,92.2
@@ -219,7 +219,7 @@ Tumbarumba Public School,Bellevue Hill,Independent,1110,1967,18,2018,91.6
 Tumbarumba Public School,Bellevue Hill,Independent,1110,1967,18,2019,89.4
 Tumbarumba Public School,Bellevue Hill,Independent,1110,1967,18,2021,90
 Tumbarumba Public School,Bellevue Hill,Independent,1110,1967,18,2022,87.3
-Binda Public School,Waverley,Government,1151,599,20,2011,sp
+Binda Public School,Waverley,Government,1151,599,20,2011,92.1
 Binda Public School,Waverley,Government,1151,599,20,2012,85
 Binda Public School,Waverley,Government,1151,599,20,2013,90.3
 Binda Public School,Waverley,Government,1151,599,20,2014,95.1
@@ -228,7 +228,7 @@ Binda Public School,Waverley,Government,1151,599,20,2016,91.6
 Binda Public School,Waverley,Government,1151,599,20,2017,90.4
 Binda Public School,Waverley,Government,1151,599,20,2018,90
 Binda Public School,Waverley,Government,1151,599,20,2019,89.9
-Binda Public School,Waverley,Government,1151,599,20,2021,sp
+Binda Public School,Waverley,Government,1151,599,20,2021,92.1
 Binda Public School,Waverley,Government,1151,599,20,2022,88.4
 Cabramatta West Public School,Waverley,Government,1136,330,35,2011,94.1
 Cabramatta West Public School,Waverley,Government,1136,330,35,2012,95.1
@@ -343,8 +343,8 @@ Tharbogang Public School,Rose Bay,Independent,1159,911,14,2022,85.6
 Wanaaring Public School,Rose Bay,Independent,1140,972,6,2011,86.9
 Wanaaring Public School,Rose Bay,Independent,1140,972,6,2012,90.4
 Wanaaring Public School,Rose Bay,Independent,1140,972,6,2013,91.4
-Wanaaring Public School,Rose Bay,Independent,1140,972,6,2014,sp
-Wanaaring Public School,Rose Bay,Independent,1140,972,6,2015,sp
+Wanaaring Public School,Rose Bay,Independent,1140,972,6,2014,92.1
+Wanaaring Public School,Rose Bay,Independent,1140,972,6,2015,92.1
 Wanaaring Public School,Rose Bay,Independent,1140,972,6,2016,86.9
 Wanaaring Public School,Rose Bay,Independent,1140,972,6,2017,94.7
 Wanaaring Public School,Rose Bay,Independent,1140,972,6,2018,88.8
@@ -623,9 +623,9 @@ Sofala Public School,Annandale,Catholic,1165,176,21,2015,95.1
 Sofala Public School,Annandale,Catholic,1165,176,21,2016,93.2
 Sofala Public School,Annandale,Catholic,1165,176,21,2017,95.9
 Sofala Public School,Annandale,Catholic,1165,176,21,2018,85.3
-Sofala Public School,Annandale,Catholic,1165,176,21,2019,sp
-Sofala Public School,Annandale,Catholic,1165,176,21,2021,sp
-Sofala Public School,Annandale,Catholic,1165,176,21,2022,sp
+Sofala Public School,Annandale,Catholic,1165,176,21,2019,92.1
+Sofala Public School,Annandale,Catholic,1165,176,21,2021,92.1
+Sofala Public School,Annandale,Catholic,1165,176,21,2022,92.1
 Claremont Meadows Public School,Rozelle,Government,1153,632,19,2011,93.5
 Claremont Meadows Public School,Rozelle,Government,1153,632,19,2012,93.2
 Claremont Meadows Public School,Rozelle,Government,1153,632,19,2013,93.2
@@ -734,7 +734,7 @@ Booligal Public School,Newtown,Government,1142,258,29,2016,92.4
 Booligal Public School,Newtown,Government,1142,258,29,2017,95.5
 Booligal Public School,Newtown,Government,1142,258,29,2018,92.8
 Booligal Public School,Newtown,Government,1142,258,29,2019,94.7
-Booligal Public School,Newtown,Government,1142,258,29,2021,sp
+Booligal Public School,Newtown,Government,1142,258,29,2021,92.1
 Booligal Public School,Newtown,Government,1142,258,29,2022,76
 Chullora Public School,Newtown,Government,1133,417,23,2011,94.3
 Chullora Public School,Newtown,Government,1133,417,23,2012,93.4
@@ -848,8 +848,8 @@ Alstonville Public School,Russell Lea,Government,1140,258,31,2021,90.2
 Alstonville Public School,Russell Lea,Government,1140,258,31,2022,84
 Blackville Public School,Five Dock,Government,1079,392,44,2011,95.5
 Blackville Public School,Five Dock,Government,1079,392,44,2012,92.4
-Blackville Public School,Five Dock,Government,1079,392,44,2013,sp
-Blackville Public School,Five Dock,Government,1079,392,44,2014,sp
+Blackville Public School,Five Dock,Government,1079,392,44,2013,92.1
+Blackville Public School,Five Dock,Government,1079,392,44,2014,92.1
 Blackville Public School,Five Dock,Government,1079,392,44,2015,93.2
 Blackville Public School,Five Dock,Government,1079,392,44,2016,95.9
 Blackville Public School,Five Dock,Government,1079,392,44,2017,96.7
@@ -1054,7 +1054,7 @@ Dalton Public School,Chatswood,Government,1154,1315,88,2017,96.1
 Dalton Public School,Chatswood,Government,1154,1315,88,2018,95
 Dalton Public School,Chatswood,Government,1154,1315,88,2019,90.1
 Dalton Public School,Chatswood,Government,1154,1315,88,2021,89.8
-Dalton Public School,Chatswood,Government,1154,1315,88,2022,sp
+Dalton Public School,Chatswood,Government,1154,1315,88,2022,92.1
 Pelaw Main Public School,Chatswood,Catholic,1150,314,74,2011,92.8
 Pelaw Main Public School,Chatswood,Catholic,1150,314,74,2012,92.6
 Pelaw Main Public School,Chatswood,Catholic,1150,314,74,2013,92.4
@@ -1221,13 +1221,13 @@ Duranbah Public School,Killara,Government,1156,432,64,2019,89.4
 Duranbah Public School,Killara,Government,1156,432,64,2021,91.5
 Duranbah Public School,Killara,Government,1156,432,64,2022,88.6
 Ebor Public School,Gordon,Government,1168,314,43,2011,98.7
-Ebor Public School,Gordon,Government,1168,314,43,2012,sp
+Ebor Public School,Gordon,Government,1168,314,43,2012,92.1
 Ebor Public School,Gordon,Government,1168,314,43,2013,89.1
 Ebor Public School,Gordon,Government,1168,314,43,2014,88.4
 Ebor Public School,Gordon,Government,1168,314,43,2015,86.8
 Ebor Public School,Gordon,Government,1168,314,43,2016,97.5
 Ebor Public School,Gordon,Government,1168,314,43,2017,93.7
-Ebor Public School,Gordon,Government,1168,314,43,2018,sp
+Ebor Public School,Gordon,Government,1168,314,43,2018,92.1
 Ebor Public School,Gordon,Government,1168,314,43,2019,94.1
 Ebor Public School,Gordon,Government,1168,314,43,2021,93.2
 Ebor Public School,Gordon,Government,1168,314,43,2022,83.1
@@ -1978,7 +1978,7 @@ Durrumbul Public School,North Curl Curl,Government,1104,833,26,2017,93.5
 Durrumbul Public School,North Curl Curl,Government,1104,833,26,2018,90.4
 Durrumbul Public School,North Curl Curl,Government,1104,833,26,2019,87.9
 Durrumbul Public School,North Curl Curl,Government,1104,833,26,2021,83.8
-Durrumbul Public School,North Curl Curl,Government,1104,833,26,2022,sp
+Durrumbul Public School,North Curl Curl,Government,1104,833,26,2022,92.1
 Emmaville Central School,Cromer,Government,1091,639,16,2011,85.9
 Emmaville Central School,Cromer,Government,1091,639,16,2012,88.7
 Emmaville Central School,Cromer,Government,1091,639,16,2013,91.3
@@ -2011,7 +2011,7 @@ Beckom Public School,Beacon Hill,Government,1088,533,22,2017,97.7
 Beckom Public School,Beacon Hill,Government,1088,533,22,2018,96
 Beckom Public School,Beacon Hill,Government,1088,533,22,2019,88.6
 Beckom Public School,Beacon Hill,Government,1088,533,22,2021,90.2
-Beckom Public School,Beacon Hill,Government,1088,533,22,2022,sp
+Beckom Public School,Beacon Hill,Government,1088,533,22,2022,92.1
 Cessnock West Public School,Brookvale,Government,1052,341,47,2011,92.6
 Cessnock West Public School,Brookvale,Government,1052,341,47,2012,92.9
 Cessnock West Public School,Brookvale,Government,1052,341,47,2013,92.7
@@ -2118,9 +2118,9 @@ Capertee Public School,Hunters Hill,Government,1141,541,28,2014,96.7
 Capertee Public School,Hunters Hill,Government,1141,541,28,2015,97.6
 Capertee Public School,Hunters Hill,Government,1141,541,28,2016,95.5
 Capertee Public School,Hunters Hill,Government,1141,541,28,2017,94.7
-Capertee Public School,Hunters Hill,Government,1141,541,28,2018,sp
-Capertee Public School,Hunters Hill,Government,1141,541,28,2019,sp
-Capertee Public School,Hunters Hill,Government,1141,541,28,2021,sp
+Capertee Public School,Hunters Hill,Government,1141,541,28,2018,92.1
+Capertee Public School,Hunters Hill,Government,1141,541,28,2019,92.1
+Capertee Public School,Hunters Hill,Government,1141,541,28,2021,92.1
 Capertee Public School,Hunters Hill,Government,1141,541,28,2022,89.4
 Cronulla South Public School,Hunters Hill,Government,1162,369,36,2011,94.7
 Cronulla South Public School,Hunters Hill,Government,1162,369,36,2012,94.7
