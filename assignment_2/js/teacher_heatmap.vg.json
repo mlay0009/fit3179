@@ -1,0 +1,52 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 600,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/assignment_2/data/sydney_school_teacher.csv"
+  },
+  "params": [
+    {
+      "name": "gender_filter",
+      "value": "Female",
+      "bind": {
+        "input": "select",
+        "options": ["Female", "Male"],
+        "labels": ["Female", "Male"],
+        "name": "Gender Type: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "datum.Gender == gender_filter"
+    }
+  ],
+  "mark": "rect",
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "ordinal",
+      "title": "Year"
+    },
+    "y": {
+      "field": "Area",
+      "type": "nominal",
+      "title": "Area Type"
+    },
+    "color": {
+      "field": "Value",
+      "type": "quantitative",
+      "scale": {
+        "type": "linear",
+        "range": ["white", "green"]
+      },
+      "title": "Value"
+    },
+    "tooltip": [
+      { "field": "Year", "title": "Year" },
+      { "field": "Area", "title": "Area" },
+      { "field": "Value", "title": "Value" }
+    ]
+  }
+}
