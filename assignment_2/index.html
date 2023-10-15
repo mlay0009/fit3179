@@ -63,7 +63,7 @@
           learning, which, in many instances, included remote and online education.</p>
     </div>
   </div>
-    <div id="multiple_line"></div>
+    <div id="histogram"></div>
     <div id="lollipop"></div>
     <div class="grid-1">
       <div class="column-1-text">
@@ -97,8 +97,8 @@
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
-    var spec6 = "js/icsea_lines.vg.json";
-    vegaEmbed('#multiple_line', spec6, { "actions": false }).then(function(result) {
+    var spec6 = "js/icsea_hist.vg.json";
+    vegaEmbed('#histogram', spec6, { "actions": false }).then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 

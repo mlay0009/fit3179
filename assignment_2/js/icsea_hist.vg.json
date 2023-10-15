@@ -1,0 +1,55 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/assignment_2/data/sydney_hist.csv"
+  },
+  "mark": "bar",
+  "params": [
+    {
+      "name": "school_sector",
+      "value" : "Government",
+      "bind": {
+        "input": "select",
+        "options": ["Catholic", "Government", "Independent"],
+        "labels": ["Catholic", "Government", "Independent"],
+        "name": "School Sector Type: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "datum.School_Sector == school_sector"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "bin": {"maxbins": 15},
+      "field": "ICSEA",
+      "type": "quantitative",
+      "title": "ICSEA Score Bins"
+    },
+    "y": {
+      "aggregate": "count",
+      "type": "quantitative",
+      "title": "Frequency"
+    },
+    "color": {
+      "field": "School_Sector",
+      "type": "nominal",
+      "title": "School Sector",
+      "scale": {
+        "domain": ["Catholic", "Government", "Independent"],
+        "range": ["#e41a1c", "#984ea3", "#ff7f00"]
+      }
+    },
+    "tooltip": [
+      {"bin": {"maxbins": 15},
+      "field": "ICSEA",
+      "type": "quantitative",
+      "title": "ICSEA Score Bins"},
+      {"aggregate": "count",
+      "type": "quantitative",
+      "title": "Frequency"}
+    ]
+  }
+}
