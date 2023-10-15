@@ -3,20 +3,17 @@
     "data": {
         "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/assignment_2/data/sydney_donut.csv"
     },
-    "mark": "arc",
-    "encoding": {
-      "theta": {"field": "Count of Year_Range", "type": "quantitative", "stack": true, "title": "Count of Year Range"},
-      "color": {"field": "Year_Range", "type": "nominal", "legend": {"title": "Year Range"}},
-      "tooltip": [
-        {"field": "Year_Range", "type": "nominal", "title": "Year Range"},
-        {"field": "Count of Year_Range", "type": "quantitative", "title": "Total Schools"}
-      ]
-    },
-    "view": {"stroke": null},
-    "width": 200,
-    "height": 200,
-    "config": {
-      "arc": {"innerRadius": 60}
-    }
-  }
+     "mark": "arc",
+  "encoding": {
+    "theta": {"field": "Count", "type": "quantitative"},
+    "color": {"field": "Year_Range", "type": "nominal"},
+    "tooltip": [{"field": "Year_Range", "type": "nominal"}, 
+    {"field": "Count", "type": "quantitative", "title" : "Number of Schools"}]
+  },
+  "transform": [{"window": [{"op": "sum", "field": "Count", "as": "sum_Count"}]}],
+  "config": {"arc": {"innerRadius":60}},
+  "title": "Year Range Distribution",
+  "width": 200,
+  "height": 200
+}
   

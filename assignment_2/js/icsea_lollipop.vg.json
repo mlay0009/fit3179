@@ -1,35 +1,52 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "data": {
-      "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/assignment_2/data/sydney_dot.csv"
-    },
-    "layer": [
-      {
-        "mark": {"type": "rule"},
-        "encoding": {
-          "y": {"field": "School_Sector", "type": "ordinal", "title": "School Sector"},
-          "x": {"field": "Average_ICSEA", "type": "quantitative", "title": "ICSEA", "scale": {"domain": [1100, 1180]}},
-          "x2": {"value": 0}
-        }
-      },
-      {
-        "mark": {"type": "circle", "filled": true, "size": 80},
-        "encoding": {
-          "y": {"field": "School_Sector", "type": "ordinal", "title": "School Sector"},
-          "x": {
-            "field": "Average_ICSEA", 
-            "type": "quantitative", 
-            "scale": {"domain": [1100, 1180]}
-            },
-            "color": {
-              "field": "School_Sector",
-              "type": "nominal",
-              "title": "School Sector",
-              "scale": {"range": ["#e41a1c", "#984ea3", "#ff7f00"]}
-            }
-        }
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/assignment_2/data/sydney_dot.csv"
+  },
+  "layer": [
+    {
+      "mark": {"type": "rule"},
+      "encoding": {
+        "y": {"field": "School_Sector", "type": "ordinal", "title": "School Sector"},
+        "x": {"field": "Min_ICSEA", "type": "quantitative", "title": "ICSEA", "scale": {"domain": [800, 1300]}},
+        "x2": {"field": "Max_ICSEA", "type": "quantitative"}
       }
-    ],
-    "config": {"view": {"stroke": "transparent"}}
-  }
-  
+    },
+    {
+      "mark": {"type": "circle", "filled": true, "size": 80},
+      "encoding": {
+        "y": {"field": "School_Sector", "type": "ordinal", "title": "School Sector"},
+        "x": {
+          "field": "Min_ICSEA", 
+          "type": "quantitative", 
+          "scale": {"domain": [1100, 1180]}
+          },
+          "color": {
+            "field": "School_Sector",
+            "type": "nominal",
+            "title": "School Sector",
+            "scale": {"range": ["#e41a1c", "#984ea3", "#ff7f00"]}
+          },
+          "opacity": {"value": 1}
+      }
+    },
+    {
+      "mark": {"type": "circle", "filled": true, "size": 80},
+      "encoding": {
+        "y": {"field": "School_Sector", "type": "ordinal", "title": "School Sector"},
+        "x": {
+          "field": "Max_ICSEA", 
+          "type": "quantitative", 
+          "scale": {"domain": [1100, 1180]}
+          },
+          "color": {
+            "field": "School_Sector",
+            "type": "nominal",
+            "title": "School Sector",
+            "scale": {"range": ["#984ea3", "#984ea3", "#ff7f00"]}
+          },
+          "opacity": {"value": 1}
+      }
+    }
+  ]
+}
