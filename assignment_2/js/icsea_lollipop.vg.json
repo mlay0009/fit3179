@@ -27,9 +27,12 @@
             "title": "School Sector",
             "scale": {"range": ["#e41a1c", "#984ea3", "#ff7f00"]}
           },
-          "opacity": {"value": 1}
-      }
-    },
+          "opacity": {"value": 1},
+          "tooltip": [
+          {"field": "School_Sector", "title": "School Sector"},
+          {"field": "Min_ICSEA", "title": "Minimum ICSEA"}
+          ]
+    }},
     {
       "mark": {"type": "circle", "filled": true, "size": 80},
       "encoding": {
@@ -45,8 +48,11 @@
             "title": "School Sector",
             "scale": {"range": ["#984ea3", "#984ea3", "#ff7f00"]}
           },
-          "opacity": {"value": 1}
-      }
-    }
+          "opacity": {"value": 1},
+          "tooltip": [
+          {"field": "School_Sector", "title": "School Sector"},
+          {"field": "Max_ICSEA", "title": "Maximum ICSEA"}
+          ]
+    }}
   ]
 }
