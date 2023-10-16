@@ -34,12 +34,15 @@
           "y": {
             "title": "Attendance Rate",
             "field": "Value",
-            "scale": {"domain": [50, 100]},
+            "scale": {"domain": [70, 100], "nice": true},
             "type": "quantitative"
-          }
+          },
+          "tooltip" : 
+          [{ "field": "School_Sector", "type": "nominal", "title": "School Sector" },
+           { "field": "Value", "title": "Attendance Rate", "format" : ".1%" }]
         },
         "width": 600,
-        "height": 300,
+        "height": 600,
         "mark": "point",
         "params": [{
           "name": "brush",
@@ -61,7 +64,10 @@
             "value": "lightgray"
           },
           "x": {"aggregate": "count"},
-          "y": {"title": "School Sector", "field": "School_Sector"}
+          "y": {"title": "School Sector", "field": "School_Sector"},
+          "tooltip" : 
+          [{ "field": "School_Sector", "type": "nominal", "title": "School Sector" },
+           { "aggregate": "count", "title": "Count of Schools" }]
         },
         "width": 600,
         "mark": "bar",
