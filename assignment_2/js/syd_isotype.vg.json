@@ -1,9 +1,9 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "height": "container",
-    "width": "container",
+    "height": 300,
+    "width": 300,
     "data": {
-        "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/assignment_2/data/sydney_donut.csv"
+        "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/assignment_2/data/sydney_isotype.csv"
     },
     "mark": {
         "type": "circle",
