@@ -20,7 +20,7 @@
             "field": "Row",
             "type": "quantitative",
             "axis": null,
-            "sort": "y"
+            "sort": "-y"
         },
         "color": {
             "field": "Type",
