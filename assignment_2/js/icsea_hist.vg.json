@@ -1,5 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 480,
+  "height": 400,
+  "title": {
+    "text": "ICSEA Scores Distribution by School Sector",
+    "subtitle" : "Utilise Select List to Change Sector Type",
+    "fontSize": 16,
+    "offset": 12
+  },
   "data": {
     "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/assignment_2/data/sydney_hist.csv"
   },
@@ -40,7 +48,12 @@
       "scale": {
         "domain": ["Catholic", "Government", "Independent"],
         "range": ["#e41a1c", "#984ea3", "#ff7f00"]
-      }
+      },
+        "legend" : {
+          "title": "School Sector",
+          "orient": "top-left",
+          "offset" : 10
+        }
     },
     "tooltip": [
       {"bin": {"maxbins": 15},

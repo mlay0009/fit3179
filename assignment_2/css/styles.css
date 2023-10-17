@@ -1,19 +1,14 @@
-.fixed_page{
-	width: auto; 
-	margin: 0 auto; 
-	padding: 50px;
-	padding-top: 30px;
+body {
+	margin : 100px;
+	margin-left: 150px;
+	margin-right: 150px;
 	font-family: 'Montserrat', sans-serif;
 }
 
-body {
-	margin: 100px;
-  }
-
 h1{
-	font-size: 40px; 
-	color: #4c3228; 
-	font-family: 'Montserrat', sans-serif;
+	font-size: 60px; 
+	color: #994d00;
+	font-family: 'Georgia', sans-serif;
 	font-weight: bold;
 	text-transform: uppercase;
 	text-align: center;
@@ -37,15 +32,55 @@ p{
 	margin-bottom: 10px; 
 }
 
-.symbol_map{
-	max-width: 100%;
+#symbol_map{
+	width: auto;
+	margin-right: 50px;
 	height : auto;
 }
 
-.bubble_plot{
+#attendance{
+	width: auto;
+	margin-right: 10px;
+	margin-bottom: 20px;
+}
+
+#isotype{
+	display: flex;
+	margin-left: 100px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+}
+
+#bubble_plot{
+	width: auto;
+	margin-left: 125px;
+	margin-bottom: 20px;
+}
+
+#heatmap{
 	width: auto;
 	margin-bottom: 20px;
 }
+
+#stacked_bar{
+	width: auto;
+	margin-right: 50px;
+	margin-bottom: 20px;
+}
+
+#histogram{
+	width: auto;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+#lollipop{
+	width: auto;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+
 
 /* styles.css */
 .container {
@@ -79,3 +114,30 @@ p{
 	grid-column: 2;
 	grid-row: 2;
 }
+
+.column-3-text {
+	width: 100%;
+	grid-column: 1;
+	grid-row: 2;
+}
+
+.column-4-text {
+	padding-right: 10%;
+	padding-left: 10%;
+	grid-column: 2;
+	grid-row: 2;
+}
+
+.column-5-text {
+	padding-right: 10%;
+	padding-left: 15%;
+	grid-column: 2;
+	grid-row: 2;
+}
+
+.centered-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh; /* Adjust the height as needed to center vertically */
+  }

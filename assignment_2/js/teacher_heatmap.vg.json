@@ -1,7 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 600,
-  "height": 300,
+  "width": 380,
+  "height": 250,
+  "title": {
+    "text": "Teaching Staff Gender Distribution",
+    "subtitle" : "Utilise Gender Filter to Change Gender",
+    "fontSize": 16,
+    "offset": 12
+  },
   "data": {
     "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/assignment_2/data/sydney_school_teacher.csv"
   },
@@ -35,18 +41,18 @@
       "title": "Area Type"
     },
     "color": {
-      "field": "Value",
+      "field": "Percent",
       "type": "quantitative",
       "scale": {
         "type": "linear",
-        "range": ["white", "green"]
+        "range": ["white", "#663300"]
       },
       "title": "Value"
     },
     "tooltip": [
       { "field": "Year", "title": "Year" },
       { "field": "Area", "title": "Area" },
-      { "field": "Value", "title": "Value" }
+      { "field": "Value", "title": "Value", "format" : ".1%"}
     ]
   }
 }

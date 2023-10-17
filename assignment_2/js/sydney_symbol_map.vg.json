@@ -1,22 +1,16 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 450,
+  "width": 550,
   "height": 450,
-  "title": "Primary Schools in Sydney Map",
+  "title": {
+    "text" : "Primary Schools in Sydney Map",
+    "subtitle" : "Utilise Legend to Filter Data",
+    "fontSize": 16,
+    "offset": 12
+  },
   "data": {
     "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/assignment_2/data/sydney_map.csv"
   },
-  "params": [
-    {
-      "name": "school_sector",
-      "bind": {
-        "input": "select",
-        "options": [null, "Catholic", "Government", "Independent"],
-        "labels": ["Show All", "Catholic", "Government", "Independent"],
-        "name": "School Sector Type: "
-      }
-    }
-  ],
   "layer": [
     {
       "data": {
@@ -45,6 +39,11 @@
             "type": "threshold",
             "domain": [100, 300, 500, 1000, 2000],
             "range": [15, 25, 50, 75, 100, 200]
+          },
+          "legend" : {
+            "title": "Diversity (Richter Scale)",
+            "orient": "top-left",
+            "offset" : 10
           }
         },
         "color": {
@@ -54,6 +53,10 @@
           "scale": {
             "domain": ["Catholic", "Government", "Independent"],
             "range": ["#e41a1c", "#984ea3", "#ff7f00"]
+          },
+          "legend" : {
+            "title": "School Sector",
+            "orient": "top"
           }
         },
         "opacity": {
@@ -69,11 +72,7 @@
           { "field": "Indigenous_Enrolments", "type": "nominal", "title": "Indigenous Enrolments" },
           { "field": "Language_Background_Other_Than_English", "type": "nominal", "title": "Student Diversity" }
         ]
-      },
-      "transform": [
-        { "filter": "school_sector == null || datum.School_Sector == school_sector" }
-      ]
+      }
     }
   ]
 }
-

@@ -4,38 +4,13 @@
   "height": 600,
   "title": {
     "text": "Top 50 Sydney Primary School Gender Distribution",
+    "subtitle" : "Utilise Legend to Filter Data",
     "fontSize": 16,
     "offset": 12
   },
   "data": {
     "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/assignment_2/data/top_50_bubble.csv"
   },
-  "params": [
-    {
-      "name": "school_sector",
-      "bind": {
-        "input": "select",
-        "options": [
-          null,
-          "Catholic",
-          "Government",
-          "Independent"
-        ],
-        "labels": [
-          "Show All",
-          "Catholic",
-          "Government",
-          "Independent"
-        ],
-        "name": "School Sector Type: "
-      }
-    }
-  ],
-  "transform": [
-    {
-      "filter": "school_sector == null || datum.School_Sector == school_sector"
-    }
-  ],
   "encoding": {
     "x": {
       "field": "Girls_Enrolments",
@@ -51,6 +26,10 @@
   "layer": [
     {
       "mark": "circle",
+      "params" : [{
+        "name": "sector_click",
+        "select": {"type": "point", "fields": ["School_Sector"]},
+        "bind": "legend"}],
       "encoding": {
         "size": {
           "field": "Diversity",
@@ -80,6 +59,10 @@
             ]
           }
         },
+        "opacity": {
+          "condition": {"param": "sector_click", "value": 0.8},
+          "value": 0.1
+        },
         "tooltip": [
           {"field": "School_Name", "type": "nominal", "title" : "School Name"},
           {"field": "School_Sector", "type": "nominal", "title" : "School Sector"},
@@ -98,6 +81,10 @@
       "fontSize": 11, 
       "dx": 5
       },
+      "params" : [{
+        "name": "sector",
+        "select": {"type": "point", "fields": ["School_Sector"]},
+        "bind": "legend"}],
       "encoding": {
         "text": {"value": "Independent schools tend to have more male students"}, 
         "x": {"field" : "x_annotation"},
@@ -125,7 +112,7 @@
       "data": {
         "values": [
           {"y": "0", "x": "0"},
-          {"y": "900", "x": "900"}
+          {"y": "700", "x": "700"}
           ]
       },
       "mark": {

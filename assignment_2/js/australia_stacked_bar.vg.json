@@ -1,9 +1,16 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 250,
+  "height": 250,
+  "title": {
+    "text": "Australian Government School Enrolments by Region",
+    "subtitle" : " ",
+    "fontSize": 16,
+    "offset": 12
+  },
   "data": {
     "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/assignment_2/data/aus_enrolments.csv"
   },
-  "title": "Normalized Stacked Bar Chart of Government vs. Non-Government Data",
   "transform": [
     {"calculate": "datum.Attribute == 2 ? 'Non-Government' : 'Government'", "as": "type"},
     {"calculate": "datum.Value * 100", "as": "ValuePercentage"}
@@ -12,7 +19,8 @@
   "encoding": {
     "y": {
       "field": "State",
-      "type": "nominal"
+      "type": "nominal",
+      "sort": "-x"
     },
     "x": {
       "field": "ValuePercentage", 
@@ -20,18 +28,22 @@
       "stack": "normalize",
       "axis": {
         "format": "%",
-        "title": "Percentage" 
+        "title": "Percentage"
       }
     },
     "color": {
       "field": "type",
       "type": "nominal",
-      "title" : "School Type"
+      "title": "School Sector",
+      "scale": {
+        "domain": ["Government", "Non-Government"], 
+        "range": ["#984ea3", "silver"] 
+      }
     },
-    "tooltip" :[
-      {"field" : "State", "type" : "nominal"},
-      {"field" : "type", "type" : "nominal"},
-      {"field" : "Value", "type" : "quantitative", "format": ",d", "title" : "Total Enrolments"}
+    "tooltip": [
+      {"field": "State", "type": "nominal"},
+      {"field": "type", "type": "nominal",  "title": "School Sector"},
+      {"field": "Value", "type": "quantitative", "format": ",d", "title": "Total Enrolments"}
     ]
   }
 }

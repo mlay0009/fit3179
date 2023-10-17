@@ -1,6 +1,11 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "data": {"url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/assignment_2/data/sydney_int.csv"},
+    "title": {
+      "text" : "Primary Schools in Sydney Map",
+      "subtitle" : "Drag and Select Vertically to Filter Data",
+      "anchor": "middle"
+    },
     "vconcat": [
       {
         "encoding": {
@@ -13,16 +18,10 @@
               "scale": {
                 "domain": ["Catholic", "Government", "Independent"],
                 "range": ["#e41a1c", "#984ea3", "#ff7f00"]
-              }
+              },
+              "legend" : {"orient" : "top"}
             },
             "value": "lightgray"
-          },
-          "size": {
-            "title": "Total_Enrolments",
-            "field": "Total_Enrolments",
-            "scale": {"domain": [100, 300, 500, 1000, 2000],
-              "range": [15, 25, 50, 75, 100, 200]},
-            "type": "quantitative"
           },
           "x": {
             "field": "Year",
@@ -33,16 +32,17 @@
           },
           "y": {
             "title": "Attendance Rate",
-            "field": "Value",
+            "field": "Percent",
             "scale": {"domain": [70, 100], "nice": true},
             "type": "quantitative"
           },
           "tooltip" : 
-          [{ "field": "School_Sector", "type": "nominal", "title": "School Sector" },
-           { "field": "Value", "title": "Attendance Rate", "format" : ".1%" }]
+          [{ "field": "School_Name", "type": "nominal", "title": "School " },
+          { "field": "School_Sector", "type": "nominal", "title": "School Sector" },
+           { "field": "Value", "title": "Attendance Rate (%)", "format" : ".1%" }]
         },
-        "width": 600,
-        "height": 600,
+        "width": 450,
+        "height": 500,
         "mark": "point",
         "params": [{
           "name": "brush",
@@ -69,7 +69,7 @@
           [{ "field": "School_Sector", "type": "nominal", "title": "School Sector" },
            { "aggregate": "count", "title": "Count of Schools" }]
         },
-        "width": 600,
+        "width": 450,
         "mark": "bar",
         "params": [{
           "name": "click",

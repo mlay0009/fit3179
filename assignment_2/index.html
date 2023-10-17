@@ -14,61 +14,93 @@
 <body>
   <h1>Sydney Primary Schools</h1>
   <div class="grid-1">
-    <h2>Education in Australia</h2>
     <div class="column-1-text">
-      <p>In Australia, primary education is offered through a range of educational sectors, each with its unique characteristics and 
-        contributions to the country's educational landscape. One of the fundamental sectors is the government school system. 
-        Government schools are publicly funded and operated by state and territory governments. They serve as an essential pillar of the Australian 
-        education system, providing primary education to students in their local communities. These schools are known for their commitment to accessibility, 
-        striving to offer quality education to all students, regardless of their socio-economic background. The curriculum and operations of government schools 
-        are overseen by the respective state or territory education departments, ensuring alignment with educational standards and goals.</p>
-      <p>Another significant sector in Australian primary education is the independent school system. Independent schools are privately funded 
-        and managed institutions that operate independently of government control. They enjoy a degree of autonomy in shaping their curriculum, 
-        teaching methods, and educational programs. This autonomy allows them to cater to specific educational philosophies and approaches. Independent 
-        primary schools can vary widely, with some being associated with particular religious or cultural groups, while others maintain a secular stance. 
-        This diversity provides parents and students with a broad array of educational options, allowing them to choose schools that best align with their 
-        educational values and goals.</p>
-      <p>The third major sector in Australian primary education is Catholic schools. These schools are integral to the Catholic education system in the country. 
-        They are operated by the Catholic Church and are characterized by their emphasis on Catholic values and teachings. Catholic schools provide primary 
-        education with a focus on moral and spiritual development alongside academic excellence. They often foster a strong sense of community, and students 
-        in Catholic schools benefit from a holistic education that integrates faith into their learning experience. Catholic schools, like government and 
-        independent schools, contribute significantly to the diversity and richness of primary education in Australia. Families have the freedom to choose 
-        the sector that aligns with their values, beliefs, and educational aspirations, making the Australian education system inclusive and varied.</p>
+      <h2 style="text-align: left;">Education in Sydney</h2>
+      <p>The <strong style = "color: #994d00;">Sydney</strong> primary school education system consists of three main categorical sector types which are 
+        <strong style = "color: #994d00;">Government, Independent, and Catholic</strong>. Government schools receive public fundings from the <a href = "https://education.nsw.gov.au/">NSW Department 
+        of Education</a>, prioritising quality education to all students. These schools are known for their dedication in accessibility, ensuring alignment with
+        educational standards, regardless of student socioeconomic status. </p>
+      <p>Independent type shcools operate independently of government control, allowing to create own curriculum and teaching methods. Most Independent
+        Schools are associated with religious or cultural groups, offering <strong style = "color: #994d00;">diverse educational opportunities</strong>. 
+        Catholic schools, which emphasize moral and spiritual development in addition to academics, are the final major sector in Australian primary education. 
+        Students in Catholic schools benefit from a holistic education that incorporates faith into their learning experience, and they frequently foster a 
+        strong feeling of community.</p>
+      <p>As observed from the analysed data, majority of primary schools in Sydney are government-run and are <strong style = "color: #994d00;">evenly 
+        located throughout the city</strong>. On the other hand, most Independent schools tend to have higher diversity, shown by the size of each circles. </p>
     </div>
     <div class="column-2-text">
       <div class="column-2-text"></div>
         <div id="symbol_map",  class="symbol_map"></div>
     </div>
   </div>
-  <br> <hr>
-  <h2>Australia Enrolments</h2>
-  <div id="stacked_bar"></div>
-  <br><hr>
-  <h2>School Enrolments by Gender</h2>
-  <div id="bubble_plot", class = "bubble_plot"></div>
-  <hr>
-  <div class="container">
-    <div class="column">
-      <h2>Acceptance Rate</h2>
-      <div id="line"></div>
-      <p>The attendance rate shows how often full-time students in grades 1 to 10 come to school during the first semester. 
-        It is calculated as a percentage by comparing the days students actually attend to the total possible school days. 
-        These numbers match the National Report on Schooling and the My School website.</p>
+  <br> 
+  <div class="grid-1">
+    <div class="column-3-text">
+      <div id="attendance"></div>
+    </div>
+    <div class="column-4-text"><br>
+      <h2 style="text-align: left;">Students Attendance Rate</h2>
       <p>In 2018, NSW government schools established national guidelines for reporting student attendance statistics. 
         Due to the inclusion of part-day absences and accounting for student mobility in the calculation, most schools' attendance 
         rates fell. As a result, data from 2018 onwards could not be compared with previous years.</p>
-      <p>In the year <b>2020</b>, data on student attendance during Semester 1 showed a significant decline. 
+      <p>In the year <strong style = "color: #994d00;">2020</strong>, data on student attendance during Semester 1 showed a significant decline. 
         This downfall can be attributed to the unprecedented circumstances brought about by the global pandemic, <a href = "https://education.nsw.gov.au/about-us/education-data-and-research/cese/publications/statistics/effects-of-covid-19-on-attendance-2020">COVID-19</a>. 
         During this time, educational institutions across the globe were faced with the challenge of adapting to a new way of teaching and
           learning, which, in many instances, included remote and online education.</p>
+        <br><br>
+        <div id="isotype"></div>
+        <p>At approximately 92% of students attend classes in Sydney Primary Schools</p>
     </div>
   </div>
-    <div id="histogram"></div>
-    <div id="lollipop"></div>
-    <div id="heatmap"></div>
-    <div id="donut"></div>
-    <div id="isotype"></div>
-    <div id="attendance"></div>
+  <br>
+  <h2>Gender Distribution in Primary Schools</h2>
+  <div id="bubble_plot"></div>
+  <div class="grid-1">
+    <div class="column-1-text">
+      <p>TEXT</p>
+    </div>
+    <div class="column-4-text">
+      <p>TEXT</p>
+    </div>
+  </div>
+  <br>
+  <div class = "grid-1">
+    <div class="column-3-text">
+      <h2>Teaching Associates Genders</h2>
+      <div id="heatmap"></div>
+    </div>
+    <div class="column-4-text">
+      <h2>Comparison Between Regions</h2>
+      <div id="stacked_bar"></div>
+    </div>
+  </div>
+  <div class = "grid-1">
+    <div class="column-1-text">
+      <p>TEXT</p>
+    </div>
+    <div class="column-4-text">
+      <p>TEXT</p>
+    </div>
+  </div>
+  <br><br>
+  <h2>Sydney Primary School ICSEA Score</h2>
+  <br><br>
+  <div class = "grid-1">
+    <div class="column-3-text">
+      <div id="histogram"></div>
+    </div>
+    <div class="column-5-text">
+      <div id="lollipop"></div>
+      <p>In Australian primary schools, the ICSEA score, which stands for the Index of Community Socio-Educational Advantage, 
+        is a measure used to assess the socio-economic background of a school's student population. ICSEA scores are calculated 
+        based on the level of education, employment, and income of student parents, offering useful insights into the diversity
+        and socioeconomic status of students.</p>
+    </div>
+  </div>
+  <br>
+  <hr>
+  <p>Visualisation by Marceline Nathalie Layandri</p>
+  <p>Data Source from the <a href = "https://education.nsw.gov.au/">NSW Department of Education</a></p>
 
   <script type="text/javascript">
 
@@ -82,8 +114,8 @@
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
     
-    var spec4 = "js/sydney_line.vg.json";
-    vegaEmbed('#line', spec4, { "actions": false }).then(function(result) {
+    var spec4 = "js/sydney_attendance.vg.json";
+    vegaEmbed('#attendance', spec4, { "actions": false }).then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
     
@@ -107,18 +139,8 @@
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
-    var spec9 = "js/sydney_donut.vg.json";
-    vegaEmbed('#donut', spec9, { "actions": false }).then(function(result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-
-    var spec10 = "js/sydney_isotype.vg.json";
-    vegaEmbed('#isotype', spec10, { "actions": false }).then(function(result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-
-    var spec11 = "js/sydney_attendance.vg.json";
-    vegaEmbed('#attendance', spec11, { "actions": false }).then(function(result) {
+    var spec9 = "js/syd_isotype.vg.json";
+    vegaEmbed('#isotype', spec9, { "actions": false }).then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
   </script>

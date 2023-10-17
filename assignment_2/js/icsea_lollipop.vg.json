@@ -1,5 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 300,
+  "height": 100,
+  "title": {
+    "text": "ICSEA Range by School Sector",
+    "subtitle" : "Utilise Gender to Highlight Data",
+    "fontSize": 16,
+    "offset": 12
+  },
   "data": {
     "url": "https://raw.githubusercontent.com/mlay0009/fit3179/main/assignment_2/data/sydney_dot.csv"
   },
@@ -14,6 +22,10 @@
     },
     {
       "mark": {"type": "circle", "filled": true, "size": 80},
+      "params" : [{
+        "name": "sector",
+        "select": {"type": "point", "fields": ["School_Sector"]},
+        "bind": "legend"}],
       "encoding": {
         "y": {"field": "School_Sector", "type": "ordinal", "title": "School Sector"},
         "x": {
@@ -25,9 +37,13 @@
             "field": "School_Sector",
             "type": "nominal",
             "title": "School Sector",
-            "scale": {"range": ["#e41a1c", "#984ea3", "#ff7f00"]}
+            "scale": {"range": ["#e41a1c", "#984ea3", "#ff7f00"]},
+            "legend": {"title": "School Sector"}
           },
-          "opacity": {"value": 1},
+          "opacity": {
+            "condition": {"param": "sector", "value": 0.8},
+            "value": 0.2
+          },
           "tooltip": [
           {"field": "School_Sector", "title": "School Sector"},
           {"field": "Min_ICSEA", "title": "Minimum ICSEA"}
@@ -46,9 +62,13 @@
             "field": "School_Sector",
             "type": "nominal",
             "title": "School Sector",
-            "scale": {"range": ["#984ea3", "#984ea3", "#ff7f00"]}
+            "scale": {"range": ["#984ea3", "#984ea3", "#ff7f00"]},
+            "legend": {"title": "School Sector"}
+          },   
+          "opacity": {
+            "condition": {"param": "sector", "value": 0.8},
+            "value": 0.2
           },
-          "opacity": {"value": 1},
           "tooltip": [
           {"field": "School_Sector", "title": "School Sector"},
           {"field": "Max_ICSEA", "title": "Maximum ICSEA"}
