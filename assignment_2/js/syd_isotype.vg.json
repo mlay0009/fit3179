@@ -20,7 +20,7 @@
             "field": "Row",
             "type": "quantitative",
             "axis": null,
-            "sort": "-y"
+            "sort": "y"
         },
         "color": {
             "field": "Type",
@@ -31,7 +31,7 @@
                     "Combined"
                 ],
                 "range": [
-                    "#994d00",
+                    "#6a4a3a",
                     "#cccccc"
                 ]
             },
